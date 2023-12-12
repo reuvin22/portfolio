@@ -13,29 +13,30 @@ body {
 }
 .navBar-container{
     display: flex;
-    gap: 30%;
+    gap: 25%;
     margin-top: 3%;
     margin-left: 8%;
 }
 .navbar {
     display: flex;
-    gap: 15%;
     margin-top: 3%;
-    position: relative;
+    gap: 10%;
+    width: 30%;
 }
-a {
+.navbar a {
     text-decoration: none;
     font-size: 1.7rem;
     color: white;
+    width: 30%;
 }
-a::after {
+.navbar a::after {
     content: '';
     display: block;
     visibility: hidden;
     width: 0%;
     border: 2px solid rgb(77, 41, 193);
 }
-a:hover::after{
+.navbar a:hover::after{
     width: 100%;
     visibility: visible;
     color:rgb(77, 41, 193);
@@ -94,7 +95,7 @@ a:hover::after{
     width: 10%;
    }
    .navbar{
-    visibility: hidden;
+    display: none;
    }
    
    .navBar-container img{
