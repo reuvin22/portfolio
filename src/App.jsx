@@ -1,11 +1,9 @@
-import Navbar from './components/Navbar'
-import HomepageIntro from './components/HomepageIntro'
 import './design/style.css'
+import Hero from './components/Hero'
 function App() {
   return (
     <>
-      <Navbar />
-      <HomepageIntro />
+      <Hero />
     </>
   )
 }
