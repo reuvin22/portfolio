@@ -167,4 +167,74 @@ body {
         margin-top: 10%;
         position: absolute;
     }
+    @media only screen and (max-width: 465px) {
+        .intro {
+            margin-top: 25%;
+        }
+       .intro h3{
+        word-break: keep-all;
+       }
+       .navBar-container{
+        width: 10%;
+       }
+       .navbar{
+        display: none;
+       }
+       .burger {
+        display: block;
+        width: 15%;
+        margin-left: 65%;
+        margin-top: 1%;
+        cursor: pointer;
+       }
+       .navBar-container img{
+         visibility:visible;
+       }
+       .openBurger{
+            display: none;
+            width: 285px;
+            height: 550px;
+            border: 2px solid rgba(77,41,193,0.75);
+            margin-left: 27%;
+            margin-top: -20%;
+            position: absolute;
+            background-color: rgb(15, 14, 17);
+            transition: 0.3s;
+        }
+        .navbarBurger a{
+            display: block;
+            font-size: 30px;
+            margin-left: 50%;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .navbarBurger a::after{
+            content: '';
+            display: block;
+            visibility: hidden;
+            border: 3px solid rgba(77,41,193,0.75);
+            width: 0;
+            margin-top: 1%;
+        }
+        .navbarBurger a:hover::after{
+            visibility: visible;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .navbarBurger {
+            display: grid;
+            margin-top: 30%;
+            gap: 50%;
+            width: 30%;
+        }
+        .x {
+            display: block;
+            cursor: pointer;
+            width: 10%;
+            right: 0;
+            margin-right: 10%;
+            margin-top: 10%;
+            position: absolute;
+        }
 }
