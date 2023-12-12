@@ -173,6 +173,9 @@ body {
         }
        .intro h3{
         word-break: keep-all;
+        width: 83%;
+        text-align: justify;
+        text-indent: 10%;
        }
        .navBar-container{
         width: 10%;
@@ -237,4 +240,8 @@ body {
             margin-top: 10%;
             position: absolute;
         }
+        .buttons {
+            display: block;
+        }
+    }
 }
