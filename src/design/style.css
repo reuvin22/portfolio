@@ -59,8 +59,8 @@ a:hover::after{
 }
 .intro h3{
     color: white;
-    word-break: break-all;
-    width: 52%;
+    word-break: keep-all;
+    width: 53%;
 }
 .buttons {
     display: flex;
@@ -84,12 +84,19 @@ a:hover::after{
 }
 
 @media only screen and (max-width: 700px) {
+    .intro {
+        margin-top: 25%;
+    }
    .intro h3{
-    width: 80%;
+    word-break: keep-all;
    }
-   .navBar-container {
+   .navBar-container{
+    width: 10%;
+   }
+   .navbar{
     visibility: hidden;
    }
+   
    .navBar-container img{
      visibility:visible;
    }
