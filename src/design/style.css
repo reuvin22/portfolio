@@ -103,16 +103,18 @@ body {
     }
    .intro h3{
     word-break: keep-all;
+    text-align: justify;
+    width: 90%;
    }
    .navBar-container{
-    width: 10%;
+    width: 100%;
    }
    .navbar{
     display: none;
    }
    .burger {
     display: block;
-    width: 15%;
+    width: 70px;
     margin-left: 65%;
     margin-top: 1%;
     cursor: pointer;
@@ -122,11 +124,11 @@ body {
    }
    .openBurger{
         display: none;
-        width: 285px;
+        width: 280px;
         height: 550px;
         border: 2px solid rgba(77,41,193,0.75);
-        margin-left: 30%;
-        margin-top: -20%;
+        right: 0;
+        margin-top: -90px;
         position: absolute;
         background-color: rgb(15, 14, 17);
         transition: 0.3s;
@@ -162,12 +164,11 @@ body {
         display: block;
         cursor: pointer;
         width: 10%;
-        right: 0;
-        margin-right: 10%;
+        margin-left: 220px;
         margin-top: 10%;
         position: absolute;
     }
-    @media only screen and (max-width: 465px) {
+    /* @media only screen and (max-width: 465px) {
         .intro {
             margin-top: 25%;
         }
@@ -199,7 +200,7 @@ body {
             height: 550px;
             border: 2px solid rgba(77,41,193,0.75);
             margin-left: 27%;
-            margin-top: -20%;
+            margin-top: -30%;
             position: absolute;
             background-color: rgb(15, 14, 17);
             transition: 0.3s;
@@ -243,5 +244,5 @@ body {
         .buttons {
             display: block;
         }
-    }
+    } */
 }
