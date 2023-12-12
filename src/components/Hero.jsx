@@ -1,19 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NameLogo from '../images/Logo1.png'
 import Cv from '../components/Reuvin H..pdf'
+import Burger from '../images/burger.png'
+import X from '../images/x.png'
 
 function Hero() {
+  const [burger, setBurger] = useState(false);
+
+  const handleBurgerClick = () => {
+    setBurger(!burger);
+  }
+  const handleCloseClick  = () => {
+    setBurger(false);
+  }
+  
   return (
     <>
       <div className="navBar-container">
-        <img src={NameLogo} alt="nameLogo" />
+        <img src={NameLogo} alt="Name Logo" className='nameLogo'/>
+        <img src={Burger} 
+          alt="Burger Button" 
+          className="burger"
+          onClick={handleBurgerClick}/>
         <div className="navbar">
           <a href="">Home</a>
           <a href="">About</a>
           <a href="">Projects</a>
           <a href="">Contact</a>
         </div>
+
       </div>
+      <div className="openBurger" 
+        style={{ display: burger ? 'block' : 'none'}} 
+        >
+          <img src={X} 
+            alt="Close Burger" 
+            className='x'
+            onClick={handleCloseClick}/>
+          <div className="navbarBurger">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Projects</a>
+            <a href="">Contact</a>
+          </div>
+        </div>
 
       <div className="intro">
         <h2>Hi, I'm <span>Reuvin Hernandez</span></h2><br />
