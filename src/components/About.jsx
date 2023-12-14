@@ -22,10 +22,11 @@ function About() {
                     <div className="cards">
                         <Card title="Web Development" 
                         logo={Laptop} 
-                        descriptions="Turn your dream website come true."/>
-                        <Card title="Video Editing" 
+                        descriptions="Turn your dream website into reality."/>
+                        <Card title="Video Editing"
+                        class='card2' 
                         logo={Editing} 
-                        descriptions="Turn your video ad looks stunning!"/>
+                        descriptions="Makes your video ads looks stunning!"/>
                     </div>
                 </div>
             </div>

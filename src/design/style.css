@@ -171,6 +171,7 @@ body {
     place-items: center;
     height: 250px;
     width: 30%;
+    box-shadow: -1px -1px 36px 0px rgba(0,0,0,0.75);
     background-color: rgb(13, 13, 13);
     margin-top: 4%;
 }
@@ -191,6 +192,9 @@ body {
     padding: 10px;
     background-color: rgb(12,34,35);
 }
+.card2 {
+    background-color: rgb(89, 59, 226);
+}
 .project-content {
     width: 100%;
     display: flex;
@@ -201,6 +205,53 @@ body {
     color: white;
     font-size: 50px;
     margin-top: 2%;
+}
+.project-list-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-list {
+    width: 90%;
+    height: 70vh;
+}
+.projects > h1, .projects > h3 {
+    color: white;
+}
+.projects > h1 {
+    font-size: 30px;
+}
+.projects button {
+    padding: 10px 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid rgb(77, 41, 193);
+    color: white;
+    font-weight: bold;
+}
+.projects button:hover{
+    background-color: rgb(77, 41, 193);
+    transition: 0.3s;
+    box-shadow: 2px 2px 12px 3px rgba(77,41,193,0.75);
+}
+.projects {
+    border: 1px solid white;
+    width: 400px;
+    display: grid;
+    place-items: center;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 2%;
+}
+.project-list{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 @media only screen and (max-width: 700px) {
     .intro {
@@ -272,6 +323,9 @@ body {
         margin-left: 220px;
         margin-top: 10%;
         position: absolute;
+    }
+    #about {
+        height: 120vh;
     }
     /* @media only screen and (max-width: 465px) {
         .intro {
