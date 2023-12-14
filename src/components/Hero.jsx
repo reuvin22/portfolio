@@ -27,7 +27,7 @@ function Hero() {
           <div className="navbar">
             <a href="/">Home</a>
             <a href="#about">About</a>
-            <a href="">Projects</a>
+            <a href="#projects">Projects</a>
             <a href="">Contact</a>
           </div>
         </div>
@@ -41,7 +41,7 @@ function Hero() {
             <div className="navbarBurger">
               <a href="/">Home</a>
               <a href="#about">About</a>
-              <a href="">Projects</a>
+              <a href="#projects">Projects</a>
               <a href="">Contact</a>
             </div>
           </div>

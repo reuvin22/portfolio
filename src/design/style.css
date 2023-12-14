@@ -17,6 +17,10 @@ body {
     width: 100%;
     background-color: rgb(17, 15,23);
 }
+#projects {
+    height: 90vh;
+    width: 100%;
+}
 .nameLogo{
     height: 100px;
     min-width: 150px;
@@ -186,6 +190,17 @@ body {
     border-radius: 10px;
     padding: 10px;
     background-color: rgb(12,34,35);
+}
+.project-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-content > h1{
+    color: white;
+    font-size: 50px;
+    margin-top: 2%;
 }
 @media only screen and (max-width: 700px) {
     .intro {
