@@ -3,6 +3,7 @@ import NameLogo from '../images/Logo1.png'
 import Cv from '../components/Reuvin H..pdf'
 import Burger from '../images/burger.png'
 import X from '../images/x.png'
+import { motion } from 'framer-motion'
 
 function Hero() {
   const [burger, setBurger] = useState(false);
@@ -16,43 +17,43 @@ function Hero() {
   
   return (
     <>
-      <div className="navBar-container">
-        <img src={NameLogo} alt="Name Logo" className='nameLogo'/>
-        <img src={Burger} 
-          alt="Burger Button" 
-          className="burger"
-          onClick={handleBurgerClick}/>
-        <div className="navbar">
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Projects</a>
-          <a href="">Contact</a>
-        </div>
-
-      </div>
-      <div className="openBurger" 
-        style={{ display: burger ? 'block' : 'none'}} 
-        >
-          <img src={X} 
-            alt="Close Burger" 
-            className='x'
-            onClick={handleCloseClick}/>
-          <div className="navbarBurger">
-            <a href="">Home</a>
-            <a href="">About</a>
+    <section id="hero">
+        <div className="navBar-container">
+          <img src={NameLogo} alt="Name Logo" className='nameLogo'/>
+          <img src={Burger} 
+            alt="Burger Button" 
+            className="burger"
+            onClick={handleBurgerClick}/>
+          <div className="navbar">
+            <a href="/">Home</a>
+            <a href="#about">About</a>
             <a href="">Projects</a>
             <a href="">Contact</a>
           </div>
         </div>
-
-      <div className="intro">
-        <h2>Hi, I'm <span>Reuvin Hernandez</span></h2><br />
-        <h1>Web Developer</h1><br />
-        <h3>Passionate web developer dedicated to creating exceptional digital experiences with expertise in front-end and back-end technologies.</h3><br />
-        <div className="buttons">
-          <a href={Cv}download="Reuvin H.pdf" target='__blank' rel="noopener noreferrer"><button>Download CV</button></a><button>Message Me</button>
+        <div className="openBurger" 
+          style={{ display: burger ? 'block' : 'none'}} 
+          >
+            <img src={X} 
+              alt="Close Burger" 
+              className='x'
+              onClick={handleCloseClick}/>
+            <div className="navbarBurger">
+              <a href="/">Home</a>
+              <a href="#about">About</a>
+              <a href="">Projects</a>
+              <a href="">Contact</a>
+            </div>
+          </div>
+        <div className="intro">
+          <h2>Hi, I'm <span>Reuvin Hernandez</span></h2><br />
+          <h1>Web Developer</h1><br />
+          <h3>Passionate web developer dedicated to creating exceptional digital experiences with expertise in front-end and back-end technologies.</h3><br />
+          <div className="buttons">
+            <a href={Cv}download="Reuvin H.pdf" target='__blank' rel="noopener noreferrer"><button>Download CV</button></a><button>Message Me</button>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   )
 }
