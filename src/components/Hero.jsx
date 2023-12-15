@@ -55,9 +55,9 @@ function Hero() {
             </div>
           </motion.div>
         <motion.div className="intro"
-          initial={{ opacity:0, x:0 }}
+          initial={{ opacity:0, x:-60 }}
           transition={{ duration: 0.8, ease: "easeIn"  }}
-          whileInView={{opacity: 100, x: 100}}
+          whileInView={{opacity: 100, x: 0}}
           viewport={{ once:true }}
         >
           <h2>Hi, I'm <span>Reuvin Hernandez</span></h2><br />
