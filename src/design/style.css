@@ -460,11 +460,11 @@ form > button:hover{
         margin-top: 300px;
         text-align: justify;
         width: 90%;
-        margin-left: 3%;
+        margin-left: 6%;
     }
     .year {
         display: grid;
-        margin-left: 27%;
+        margin-left: 35%;
     }
     .cards {
         width: 100%;
@@ -510,6 +510,11 @@ form > button:hover{
 @media only screen and (max-width: 465px) {
     .about-exp {
         margin-top: -20px;
+        display: grid;
+        place-content: center;
+    }
+    .about-container{
+        width: 480px;
     }
 }
     /* @media only screen and (max-width: 465px) {
