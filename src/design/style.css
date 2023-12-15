@@ -13,11 +13,11 @@ body {
     width: 90%;
 }
 #about {
-    height: 55vh;
+    height: 65vh;
     width: 100%;
     background-color: rgb(17, 15,23);
 }
-#projects {
+#projects, #contact {
     height: 90vh;
     width: 100%;
 }
@@ -84,6 +84,7 @@ body {
 .intro h1{
     color: white;
     font-size: 50px;
+    
 }
 .intro h3{
     color: white;
@@ -112,68 +113,62 @@ body {
 }
 .about-container {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
+    display: grid;
 }
-.about-info{
+.about-container > h1{
     display: grid;
     place-items: center;
 }
-.about-info h1{
+.about-container > h1{
     font-size: 50px;
-    margin-top: 2%;
     color: white;
 }
 .about-paragraph {
     width: 60%;
-    margin-top: 2%;
-    margin-left: 20%;
+    margin-left: 30%;
 }
 .about-paragraph > p{
     font-size: 20px;
     color: white;
     text-indent: 5.5%;
 }
-.about-exp {
-    margin-left: -10%;
-}
 .about-exp h1{
-    position: absolute;
-    margin-left: -10%;
     margin-top: -5%;
     font-size: 100px;
+    color: white;
 }
 .year {
     display: grid;
+    margin-left: 10%;
     place-items: center;
     position: absolute;
-    margin-left: -15.1%;
-    margin-top: 5%;
+    margin-top: -10%;
 }
 .about-exp h2{
-    margin-left: -10%;
     margin-top: -5%;
     font-size: 10px;
     color: white;
     font-size: 25px;
 }
 .cards {
-    width: 100%;
+    width: 50%;
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5%;
-    margin-top: 4%;
+    margin-left: 30%;
+    margin-top: -10%;
 }
 .card {
     border-radius: 10px;
     display: grid;
     place-items: center;
-    height: 250px;
+    height: 230px;
     width: 30%;
     box-shadow: -1px -1px 36px 0px rgba(0,0,0,0.75);
     background-color: rgb(13, 13, 13);
-    margin-top: 4%;
 }
 .card > h2 {
     color: white;
@@ -253,6 +248,135 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
 }
+.contact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+}
+.header {
+    display: grid;
+    place-items: center;
+}
+.header > h1 {
+    color: white;
+    font-size: 50px;
+}
+.header > p {
+    color: white;
+    font-size: 20px;
+}
+.socmed {
+    width: 50%;
+}
+.form-container {
+    width: 50%;
+    height: 500px;
+}
+form {
+    display: grid;
+    width: 100%;
+}
+form > input{
+    width: 80%;
+    height: 50px;
+    padding-left: 20px;
+    background-color: rgb(13, 13, 13);
+    border: 1px solid white;
+    color: white;
+}
+form > input:focus{
+    border: 1px solid rgb(77, 41, 193);
+    transition: 0.3s;
+    box-shadow: 3px 4px 15px 4px rgba(77,41,193,0.75);
+}
+form > p {
+    color: white;
+    margin: 1% 1%;
+}
+.message {
+    height: 100px;
+    width: 80%;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: rgb(13, 13, 13);
+    border: 1px solid white;
+    color: white;
+}
+.message:focus{
+    border: 1px solid rgb(77, 41, 193);
+    transition: 0.3s;
+    box-shadow: 3px 4px 15px 4px rgba(77,41,193,0.75);
+}
+form > button {
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 2%;
+    width: 50%;
+    cursor: pointer;
+    border: 1px solid rgb(77, 41, 193);
+    background-color: rgb(13, 13, 13);
+    color: white;
+}
+form > button:hover{
+    background-color: rgb(77, 41, 193);
+    transition: 0.3s;
+    box-shadow: 2px 2px 12px 3px rgba(77,41,193,0.75);
+}
+.socmed > .cont-header {
+    display: grid;
+    place-items: center;
+}
+#contact {
+    margin-top: 3%;
+}
+.cont-header > h1 {
+    font-size: 20px;
+    color: white;
+    margin-top: 2%;
+}
+.cont-header > p {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    margin-top: 3%;
+}
+.soc-account {
+    display: grid;
+    margin-left: 15%;
+    margin-top: 3%;
+}
+.icon {
+    margin: 1% 10% 0% 2%;
+    font-size: 40px;
+}
+.soc {
+    display: flex;
+    margin-top: 4%;
+}
+.soc-type > h1{
+    color: white;
+    margin-top: 2%;
+    font-size: 18px;
+}
+.soc-type p{
+    color: white;
+    font-size: 15px;
+}
+.soc-icon {
+    color: white;
+    margin-top: 3%;
+}
+.other-icons {
+    display: flex;
+    font-size: 30px;
+    gap: 40px;
+    margin-top: 2.5%;
+    cursor: pointer;
+}
+.other-icons:hover{
+    transition: 0.3s;
+}
 @media only screen and (max-width: 700px) {
     .intro {
         margin-top: 25%;
@@ -264,7 +388,9 @@ body {
    }
    .navBar-container{
     width: 100%;
+    background-color: rgb(15, 14, 17);
    }
+
    .navbar{
     display: none;
    }
@@ -325,7 +451,62 @@ body {
         position: absolute;
     }
     #about {
-        height: 120vh;
+        height: 95vh;
+    }
+    .about-container {
+        grid: flex;
+        flex-direction: column;
+    }
+    .about-paragraph {
+        margin-top: 50%;
+        text-align: justify;
+        width: 90%;
+        margin-left: 3%;
+    }
+    .year {
+        display: grid;
+        margin-top: -70%;
+        margin-left: 27%;
+    }
+    .cards {
+        width: 100%;
+        margin-left: -2%;
+        margin-top: 10%;
+    }
+    .card {
+        width: 60%;
+    }
+    #contact, #projects {
+        height: 200vh;
+    }
+    .contact-container{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -10%;
+    }
+    form {
+        margin-left: 20%;
+    }
+    form > button {
+        width: 80%;
+    }
+    .soc-account{
+        display: grid;
+        margin-left: -15%;
+    }
+    .soc-icon {
+        margin-top: 10%;
+    }
+    .other-icons {
+        margin-top: 5%;
     }
     /* @media only screen and (max-width: 465px) {
         .intro {

@@ -7,30 +7,28 @@ function About() {
   return (
     <section id="about">
         <div className="about-container">
-            <div className="about-info">
                     <h1>ABOUT</h1>
                     <div className="about-paragraph">
                     <p>I am Reuvin Hernandez, a web developer. I am passionate and dedicated to my profession, and I believe that I am equipped with the necessary skills and knowledge to make a successful project.</p>
+                    </div>
                     <div className="about-exp">
-                        <h1>1</h1>
-                        <div className="year">
-                            <h2>Year</h2><br />
-                            <h2>Web Development</h2><br />
-                            <h2>Experience</h2>
-                        </div>
+                            <div className="year">
+                                <h1>1</h1>
+                                <h2>Year</h2><br />
+                                <h2>Web Development</h2><br />
+                                <h2>Experience</h2>
+                            </div>
                     </div>
                     <div className="cards">
                         <Card title="Web Development" 
                         logo={Laptop} 
                         descriptions="Turn your dream website into reality."/>
                         <Card title="Video Editing"
-                        class='card2' 
+                        className="card2"
                         logo={Editing} 
                         descriptions="Makes your video ads looks stunning!"/>
                     </div>
                 </div>
-            </div>
-        </div>
     </section>
   )
 }
