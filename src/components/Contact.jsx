@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { motion } from 'framer-motion';
 
 
 
@@ -36,12 +37,21 @@ function Contact() {
   return (
     <>
     <section id="contact">
-        <div className="header">
+        <motion.div className="header"
+        initial = {{ opacity: 0 }}
+        whileInView={{ opacity: 100 }}
+        transition={{ delay: 0.3, ease: "easeIn" }}
+        viewport={{ once:true }}>
             <h1>Contact</h1>
             <p>Got a Project? Let's talk</p>
-        </div>
+        </motion.div>
         <div className="contact-container">
-            <div className="socmed">
+            <motion.div className="socmed"
+                initial = {{ opacity: 0, x: -60}}
+                whileInView={{ opacity: 100, x:0 }}
+                transition={{ delay: 1, ease: "easeIn" }}
+                viewport={{ once:true }}
+            >
                 <div className="cont-header">
                     <h1>Contact Info</h1>
                     <p>Get in Touch!</p>
@@ -54,6 +64,7 @@ function Contact() {
                         <h1>+639152605271</h1>
                     </div>
                     </div>
+                    
                     <div className='soc'>
                     <FontAwesomeIcon icon={faEnvelope} style={{color: "#4d29c1",}} className='icon'/>
                     <div className="soc-type">
@@ -75,8 +86,13 @@ function Contact() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="form-container">
+            </motion.div>
+            <motion.div className="form-container"
+                initial = {{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 100, y: 0 }}
+                transition={{ delay: 1, ease: "easeIn" }}
+                viewport={{ once:true }}
+            >
                 <form onSubmit={handleForm}>
                     <p>Subject</p>
                     <input type="text" name="subject" placeholder='Subject' />
@@ -86,7 +102,7 @@ function Contact() {
                     <textarea name="email" placeholder='Type your Message...' className='message'/>
                     <button type="submit">Send</button>
                 </form>
-            </div>
+            </motion.div>
         </div>
     </section>
     </>
