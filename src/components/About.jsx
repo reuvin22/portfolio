@@ -7,15 +7,15 @@ import { motion } from 'framer-motion'
 function About() {
   return (
     <section id="about">
-        <motion.div className="about-container"
-            initial = {{ opacity: 0 }}
-            whileInView={{ opacity: 100 }}
-            transition={{ delay: 0.3, ease: "easeIn" }}
-            viewport={{ once:true }}
-        >
-                    <h1>ABOUT</h1>
+        <div className="about-container">
+                    <motion.h1
+                        initial = {{ opacity: 0 }}
+                        whileInView={{ opacity: 100 }}
+                        transition={{ delay: 0.3, ease: "easeIn" }}
+                        viewport={{ once:true }}
+                    >ABOUT</motion.h1>
                     <motion.div className="about-exp"
-                        initial = {{ opacity: 0, y: -30 }}
+                        initial = {{ opacity: 0, y: -60 }}
                         whileInView={{ opacity: 100, y: 0 }}
                         transition={{ delay: 1, ease: "easeIn" }}
                         viewport={{ once:true }}
@@ -49,7 +49,7 @@ function About() {
                         logo={Editing} 
                         descriptions="Makes your video ads looks stunning!"/>
                     </motion.div>
-                </motion.div>
+                </div>
     </section>
   )
 }

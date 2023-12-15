@@ -9,7 +9,7 @@ function Projects() {
             <motion.div className="project-container"
               initial = {{ opacity: 0 }}
               whileInView={{ opacity: 100 }}
-              transition={{ delay: 0.3, ease: "easeIn" }}
+              transition={{ delay: 0.7, ease: "easeIn" }}
               viewport={{ once:true }}
             >
                 <motion.div className="project-content"
