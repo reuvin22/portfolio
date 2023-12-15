@@ -503,6 +503,9 @@ form > button:hover{
     .soc-icon {
         margin-top: 10%;
     }
+    .soc-type > h1 {
+        font-size: 13px;
+    }
     .other-icons {
         margin-top: 5%;
     }
