@@ -450,7 +450,7 @@ form > button:hover{
         position: absolute;
     }
     #about {
-        height: 95vh;
+        height: 100vh;
     }
     .about-container {
         grid: flex;
@@ -505,6 +505,11 @@ form > button:hover{
     }
     .other-icons {
         margin-top: 5%;
+    }
+}
+@media only screen and (max-width: 465px) {
+    .year {
+
     }
 }
     /* @media only screen and (max-width: 465px) {
