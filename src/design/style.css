@@ -457,7 +457,7 @@ form > button:hover{
         flex-direction: column;
     }
     .about-paragraph {
-        margin-top: 60%;
+        margin-top: 300px;
         text-align: justify;
         width: 90%;
         margin-left: 3%;
@@ -505,6 +505,11 @@ form > button:hover{
     }
     .other-icons {
         margin-top: 5%;
+    }
+}
+@media only screen and (max-width: 465px) {
+    .about-exp {
+        margin-top: -20px;
     }
 }
     /* @media only screen and (max-width: 465px) {
@@ -584,4 +589,3 @@ form > button:hover{
             display: block;
         }
     } */
-}
