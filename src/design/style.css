@@ -462,6 +462,10 @@ form > button:hover{
         width: 90%;
         margin-left: 3%;
     }
+    .about-exp {
+        margin-bottom: 20%;
+        margin-left: -10%;
+    }
     .year {
         display: grid;
         margin-left: 27%;
