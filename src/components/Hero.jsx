@@ -36,12 +36,8 @@ function Hero() {
             <a href="#contact">Contact</a>
           </div>
         </motion.div>
-        <motion.div className="openBurger" 
+        <div className="openBurger" 
           style={{ display: burger ? 'block' : 'none'}} 
-          initial = {{ opacity: 0 }}
-          transition={{ ease: "easeIn", duration: 0.5 }}
-          whileInView={{opacity: 100}}
-          viewport={{ once:true }}
           >
             <img src={X} 
               alt="Close Burger" 
@@ -53,7 +49,7 @@ function Hero() {
               <a href="#projects">Projects</a>
               <a href="#contact">Contact</a>
             </div>
-          </motion.div>
+          </div>
         <motion.div className="intro"
           initial={{ opacity:0, x:-60 }}
           transition={{ duration: 0.8, ease: "easeIn"  }}
