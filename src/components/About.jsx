@@ -8,9 +8,6 @@ function About() {
     <section id="about">
         <div className="about-container">
                     <h1>ABOUT</h1>
-                    <div className="about-paragraph">
-                    <p>I am Reuvin Hernandez, a web developer. I am passionate and dedicated to my profession, and I believe that I am equipped with the necessary skills and knowledge to make a successful project.</p>
-                    </div>
                     <div className="about-exp">
                             <div className="year">
                                 <h1>1</h1>
@@ -18,6 +15,9 @@ function About() {
                                 <h2>Web Development</h2><br />
                                 <h2>Experience</h2>
                             </div>
+                    </div>
+                    <div className="about-paragraph">
+                    <p>I am Reuvin Hernandez, a web developer. I am passionate and dedicated to my profession, and I believe that I am equipped with the necessary skills and knowledge to make a successful project.</p>
                     </div>
                     <div className="cards">
                         <Card title="Web Development" 
