@@ -507,16 +507,6 @@ form > button:hover{
         margin-top: 5%;
     }
 }
-@media only screen and (max-width: 465px) {
-    .about-exp {
-        margin-top: -20px;
-        display: grid;
-        place-content: center;
-    }
-    .about-container{
-        width: 480px;
-    }
-}
     /* @media only screen and (max-width: 465px) {
         .intro {
             margin-top: 25%;
