@@ -1,6 +1,7 @@
 import React from 'react'
 import List from './List'
 import { motion } from 'framer-motion'
+import Findspot from '../images/findspot.png'
 
 function Projects() {
   return (
@@ -23,24 +24,28 @@ function Projects() {
                 <div className="project-list-container">
                   <div className="project-list">
                     <List 
-                      image = ""
-                      title = "My Project"
-                      link = "/"
+                      image = {Findspot}
+                      title = "Find Spot API"
+                      link = "https://github.com/reuvin22/FindSpot.git"
+                      button= "Github"
                     />
                     <List 
                       image = ""
                       title = "My Project"
                       link = "/"
+                      button= "Live"
                     />
                     <List 
                       image = ""
                       title = "My Project"
                       link = "/"
+                      button= "Live"
                     />
                     <List 
                       image = ""
                       title = "My Project"
                       link = "/"
+                      button= "Live"
                     />
                   </div>
                 </div>
