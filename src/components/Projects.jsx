@@ -2,6 +2,8 @@ import React from 'react'
 import List from './List'
 import { motion } from 'framer-motion'
 import Findspot from '../images/findspot.png'
+import Laravel from '../images/laravel.png'
+import Mysql from '../images/mysql.png'
 
 function Projects() {
   return (
@@ -28,6 +30,8 @@ function Projects() {
                       title = "Find Spot API"
                       link = "https://github.com/reuvin22/FindSpot.git"
                       button= "Github"
+                      prog1 = {Laravel}
+                      prog2 = {Mysql}
                     />
                     <List 
                       image = ""
