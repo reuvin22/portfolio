@@ -498,7 +498,7 @@ form > button:hover{
         width: 60%;
     }
     #contact, #projects {
-        height: 200vh;
+        height: 230vh;
     }
     .contact-container{
         display: flex;
