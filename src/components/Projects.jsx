@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import Findspot from '../images/findspot.png'
 import Laravel from '../images/laravel.png'
 import Mysql from '../images/mysql.png'
+import ATS from '../images/ATS.png'
+import PHP from '../images/php.png'
 
 function Projects() {
   return (
@@ -34,10 +36,12 @@ function Projects() {
                       prog2 = {Mysql}
                     />
                     <List 
-                      image = ""
-                      title = "My Project"
+                      image = {ATS}
+                      title = "Alumni Tracking System"
                       link = "/"
                       button= "Live"
+                      prog1 = {PHP}
+                      prog2 = {Mysql}
                     />
                     <List 
                       image = ""
