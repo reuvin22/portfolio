@@ -38,7 +38,7 @@ function Projects() {
                     <List 
                       image = {ATS}
                       title = "Alumni Tracking System"
-                      link = "/"
+                      link = "https://atsdevs.org/ATS/index.php"
                       button= "Live"
                       prog1 = {PHP}
                       prog2 = {Mysql}
