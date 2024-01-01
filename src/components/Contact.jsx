@@ -40,7 +40,7 @@ function Contact() {
         <motion.div className="header"
         initial = {{ opacity: 0 }}
         whileInView={{ opacity: 100 }}
-        transition={{ delay: 0.3, ease: "easeIn" }}
+        transition={{ delay: 0.3 , ease: "easeIn" }}
         viewport={{ once:true }}>
             <h1>Contact</h1>
             <p>Got a Project? Let's talk</p>
@@ -49,7 +49,7 @@ function Contact() {
             <motion.div className="socmed"
                 initial = {{ opacity: 0, x: -60}}
                 whileInView={{ opacity: 100, x:0 }}
-                transition={{ delay: 1, ease: "easeIn" }}
+                transition={{ delay: 0.5, ease: "easeIn" }}
                 viewport={{ once:true }}
             >
                 <div className="cont-header">
@@ -90,7 +90,7 @@ function Contact() {
             <motion.div className="form-container"
                 initial = {{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 100, y: 0 }}
-                transition={{ delay: 1, ease: "easeIn" }}
+                transition={{ delay: 0.4, ease: "easeIn" }}
                 viewport={{ once:true }}
             >
                 <form onSubmit={handleForm}>

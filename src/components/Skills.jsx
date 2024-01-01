@@ -23,8 +23,7 @@ export default function Skills() {
     <>
         <section id='skills'>
             <div className="mySkills">
-                <motion.div className='list'
-                >
+                <div className='list'>
                     <h1>My Skills</h1>
                     <motion.div className="skillList"
                         initial = {{ opacity: 0, x: -100 }}
@@ -47,9 +46,9 @@ export default function Skills() {
                         />
                     </motion.div>
                     <motion.div className="skillList"
-                        initial = {{ opacity: 0, x: 100 }}
-                        whileInView={{ opacity: 100, x: 0 }}
-                        transition={{ delay: 0.9, ease: "easeIn" }}
+                        initial = {{ opacity: 0, y: 60 }}
+                        whileInView={{ opacity: 100, y: 0 }}
+                        transition={{ delay: 0.8, ease: "easeIn" }}
                         viewport={{ once:true }}
                     >
                         <SkillDatabase 
@@ -65,7 +64,7 @@ export default function Skills() {
                             skill2 = {Docker}
                         />
                     </motion.div>
-                </motion.div>
+                </div>
             </div>
         </section>
     </>
