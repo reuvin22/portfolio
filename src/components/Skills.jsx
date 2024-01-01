@@ -16,15 +16,22 @@ import Firebase from '../images/firebase.png'
 import GraphQL from '../images/graphql.png'
 import AWS from '../images/aws.png'
 import Docker from '../images/docker.png'
+import { motion } from 'framer-motion'
 
 export default function Skills() {
   return (
     <>
         <section id='skills'>
             <div className="mySkills">
-                <div className='list'>
+                <motion.div className='list'
+                >
                     <h1>My Skills</h1>
-                    <div className="skillList">
+                    <motion.div className="skillList"
+                        initial = {{ opacity: 0, x: -100 }}
+                        whileInView={{ opacity: 100, x: 0 }}
+                        transition={{ delay: 0.5, ease: "easeIn" }}
+                        viewport={{ once:true }}
+                    >
                         <SkillCardFE 
                             title="FrontEnd"
                             skill = {HTML}
@@ -38,8 +45,13 @@ export default function Skills() {
                             skill = {PHP}
                             skill2 = {Laravel}
                         />
-                    </div>
-                    <div className="skillList">
+                    </motion.div>
+                    <motion.div className="skillList"
+                        initial = {{ opacity: 0, x: 100 }}
+                        whileInView={{ opacity: 100, x: 0 }}
+                        transition={{ delay: 0.9, ease: "easeIn" }}
+                        viewport={{ once:true }}
+                    >
                         <SkillDatabase 
                             title="Database"
                             skill6 = {Mysql}
@@ -52,8 +64,8 @@ export default function Skills() {
                             skill = {AWS}
                             skill2 = {Docker}
                         />
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     </>
