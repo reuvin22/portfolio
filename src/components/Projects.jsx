@@ -6,6 +6,7 @@ import Laravel from '../images/laravel.png'
 import Mysql from '../images/mysql.png'
 import ATS from '../images/ATS.png'
 import PHP from '../images/php.png'
+import Pawfect from '../images/PawfectShop.jpg'
 
 function Projects() {
   return (
@@ -45,10 +46,12 @@ function Projects() {
                       prog2 = {Mysql}
                     />
                     <List 
-                      image = ""
-                      title = "My Project"
+                      image = {Pawfect}
+                      title = "Pawfect Shop"
                       link = "/"
-                      button= "Live"
+                      button= "Github"
+                      prog1 = {Laravel}
+                      prog2 = {Mysql}
                     />
                     <List 
                       image = ""
