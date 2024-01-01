@@ -37,9 +37,10 @@ function Projects() {
                     />
                     <List 
                       image = {ATS}
+                      status = "Under Construction (Revision)"
                       title = "Alumni Tracking System"
-                      link = "https://atsdevs.org/ATS/index.php"
-                      button= "Live"
+                      link = "https://github.com/reuvin22/AlumniTrackingSystem.git"
+                      button= "Github"
                       prog1 = {PHP}
                       prog2 = {Mysql}
                     />

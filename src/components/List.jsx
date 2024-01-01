@@ -12,6 +12,7 @@ function List(props) {
             <img src={props.prog2} alt="Tech Tools" />
           </div>
             <h1>{props.title}</h1>
+            <h3>{props.status}</h3>
             <a href={props.link}><button>{props.button}</button></a>
         </div>
     </>

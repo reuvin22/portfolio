@@ -17,6 +17,11 @@ body {
     width: 100%;
     background-color: rgb(17, 15,23);
 }
+#skills {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(17, 15,23);
+}
 #projects, #contact {
     height: 130vh;
     width: 100%;
@@ -242,7 +247,7 @@ body {
     box-shadow: 2px 2px 12px 3px rgba(77,41,193,0.75);
 }
 .projects {
-    border: 1px solid white;
+    box-shadow: 0px 0px 118px -31px rgba(39,111,230,0.77);
     width: 400px;
     display: grid;
     place-items: center;
@@ -398,7 +403,63 @@ form > button:hover{
 .other-icons:hover{
     transition: 0.3s;
 }
+.list {
+    width: 100%;
+    height: 65vh;
+    display: grid;
+    place-items: center;
+}
+.skillset > img {
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 50px;
+    min-height: 50px;
+}
+.skillset1 > img {
+    max-width: 150px;
+    max-height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+}
+.list > h1{
+    color: white;
+    font-size: 50px;
+}
+.skillCard {
+    display: grid;
+    place-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    border-radius: 20px;
+    width: 30%;
+    margin-top: 2%;
+    box-shadow: 0px 0px 118px -31px rgba(58,33,138,0.77);
+}
+.skillCard > h1 {
+    color: white;
+    font-size: 30px;
+}
+.skillset{
+    display: flex;
+    gap: 30px;
+}
+.skillList {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    justify-content: center;
+}
 @media only screen and (max-width: 700px) {
+    .skillList {
+        display: grid;
+        gap: 20px;
+    }
+    .skillCard {
+        width: 100%;
+    }
+    #skills {
+        height: 150vh;
+    }
     .intro {
         margin-top: 25%;
     }
