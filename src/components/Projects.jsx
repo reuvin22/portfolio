@@ -1,5 +1,6 @@
 import React from 'react'
 import List from './List'
+import List1 from './List1'
 import { motion } from 'framer-motion'
 import Findspot from '../images/findspot.png'
 import Laravel from '../images/laravel.png'
@@ -36,12 +37,14 @@ function Projects() {
                       prog1 = {Laravel}
                       prog2 = {Mysql}
                     />
-                    <List 
+                    <List1 
                       image = {ATS}
                       status = "Under Construction (Revision)"
                       title = "Alumni Tracking System"
                       link = "https://github.com/reuvin22/AlumniTrackingSystem.git"
                       button= "Github"
+                      link2 = "https://atsdevs.org/Tracking/index.php"
+                      button2 = "Live"
                       prog1 = {PHP}
                       prog2 = {Mysql}
                     />
