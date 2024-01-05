@@ -8,6 +8,8 @@ import Mysql from '../images/mysql.png'
 import ATS from '../images/ATS.png'
 import PHP from '../images/php.png'
 import Pawfect from '../images/PawfectShop.jpg'
+import Trapinas from '../images/ladingPage.png'
+import ReactP from '../images/react.png'
 
 function Projects() {
   return (
@@ -56,11 +58,14 @@ function Projects() {
                       prog1 = {Laravel}
                       prog2 = {Mysql}
                     />
-                    <List 
-                      image = ""
-                      title = "My Project"
-                      link = "/"
-                      button= "Live"
+                    <List1 
+                      image = {Trapinas}
+                      title = "TraPinas (Landing Page)"
+                      link = "https://github.com/reuvin22/travel.git"
+                      button= "Github"
+                      link2 = "https://travel-zeta-smoky.vercel.app/"
+                      button2="Live"
+                      prog1 = {ReactP}
                     />
                   </div>
                 </div>
