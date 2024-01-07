@@ -64,7 +64,7 @@ function Projects() {
                       prog3 = {ReactN}
                       prog4 = {Firebase}
                     />
-                    <List 
+                    <List1 
                       image = {Trapinas}
                       title = "TraPinas (Landing Page)"
                       link = "https://github.com/reuvin22/travel.git"
