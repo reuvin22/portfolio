@@ -1,6 +1,7 @@
 import React from 'react'
 import List from './List'
 import List1 from './List1'
+import List2 from './List2'
 import { motion } from 'framer-motion'
 import Findspot from '../images/findspot.png'
 import Laravel from '../images/laravel.png'
@@ -10,6 +11,9 @@ import PHP from '../images/php.png'
 import Pawfect from '../images/PawfectShop.jpg'
 import Trapinas from '../images/ladingPage.png'
 import ReactP from '../images/react.png'
+import ReactN from '../images/reactN.png'
+import Firebase from '../images/firebase.png'
+import CSS from '../images/css.png'
 
 function Projects() {
   return (
@@ -50,15 +54,17 @@ function Projects() {
                       prog1 = {PHP}
                       prog2 = {Mysql}
                     />
-                    <List 
+                    <List2
                       image = {Pawfect}
                       title = "Pawfect Shop"
                       link = "/"
                       button= "Github"
                       prog1 = {Laravel}
                       prog2 = {Mysql}
+                      prog3 = {ReactN}
+                      prog4 = {Firebase}
                     />
-                    <List1 
+                    <List 
                       image = {Trapinas}
                       title = "TraPinas (Landing Page)"
                       link = "https://github.com/reuvin22/travel.git"
@@ -66,6 +72,7 @@ function Projects() {
                       link2 = "https://travel-zeta-smoky.vercel.app/"
                       button2="Live"
                       prog1 = {ReactP}
+                      prog2 = {CSS}
                     />
                   </div>
                 </div>
