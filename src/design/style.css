@@ -431,10 +431,10 @@ form > button:hover{
     place-items: center;
 }
 .skillset > img {
-    max-width: 80px;
-    max-height: 80px;
-    min-width: 50px;
-    min-height: 50px;
+    max-width: 85%;
+    max-height: 85%;
+    min-width: 50%;
+    min-height: 50%;
 }
 .skillset1 > img {
     max-width: 150px;
@@ -461,8 +461,11 @@ form > button:hover{
     font-size: 30px;
 }
 .skillset{
-    display: flex;
-    gap: 30px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 90px 90px 90px;
+    grid-row-gap: 0%;
+    grid-column-gap: 0%;
 }
 .skillList {
     display: grid;
@@ -559,7 +562,7 @@ form > button:hover{
         position: absolute;
     }
     #about {
-        height: 125vh;
+        height: 135vh;
         margin-top: 5rem;
     }
     .about-exp {
