@@ -555,12 +555,12 @@ form > button:hover{
     .expContainer {
         display: grid;
         place-items: center;
-        grid-row-gap: 20px;
+        grid-row-gap: 10%;
         width: 100%;
     }
     .about-paragraphContainer {
         width: 100%;
-        gap: 0px;
+        gap: 10%;
     }
     .about-paragraph {
         text-align: justify;
