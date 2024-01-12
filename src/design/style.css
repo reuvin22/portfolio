@@ -547,7 +547,7 @@ form > button:hover{
         position: absolute;
     }
     #about {
-        height:70vh;
+        height: 90vh;
     }
     .about-exp {
         height: 15em;
@@ -555,7 +555,7 @@ form > button:hover{
     .expContainer {
         display: grid;
         place-items: center;
-        grid-row-gap: 0px;
+        grid-row-gap: 20px;
         width: 100%;
     }
     .about-paragraphContainer {
