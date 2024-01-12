@@ -17,6 +17,7 @@ body {
     width: 100%;
     background-color: rgb(17, 15,23);
     margin-top: 5rem;
+    overflow: hidden;
 }
 #skills {
     height: 100vh;
