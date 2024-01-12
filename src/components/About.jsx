@@ -22,9 +22,9 @@ function About() {
                                 viewport={{ once:true }}
                             >
                                     <div className="year">
-                                        <h1>1</h1>
-                                        <h2>Year</h2><br />
-                                        <h2>Web Development</h2><br />
+                                        <h1>2</h1>
+                                        <h2>Years</h2><br />
+                                        <h2 className='web'>Web Development</h2><br />
                                         <h2>Experience</h2>
                                     </div>
                             </motion.div>
