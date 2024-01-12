@@ -9,22 +9,27 @@ body {
     background-color: rgb(15, 14, 17);
 }
 #hero{
-    height: 100vh;
+    height: 88vh;
     width: 90%;
 }
 #about {
     height: 65vh;
     width: 100%;
     background-color: rgb(17, 15,23);
+    margin-top: 5rem;
 }
 #skills {
     height: 100vh;
     width: 100%;
     background-color: rgb(17, 15,23);
+    display: grid;
+    place-items: center;
+    margin-top: 5rem;
 }
 #projects, #contact {
     height: 130vh;
     width: 100%;
+    margin-top: 5rem;
 }
 .nameLogo{
     height: 100px;
@@ -370,7 +375,7 @@ form > button:hover{
     place-items: center;
 }
 #contact {
-    margin-top: 3%;
+    margin-top: 5rem;
 }
 .cont-header > h1 {
     font-size: 20px;
@@ -423,7 +428,6 @@ form > button:hover{
     width: 100%;
     display: grid;
     place-items: center;
-    background-color: blue;
 }
 .skillset > img {
     max-width: 80px;
@@ -447,7 +451,7 @@ form > button:hover{
     gap: 20px;
     padding: 20px 40px;
     border-radius: 20px;
-    width: 30%;
+    width: 100%;
     margin-top: 2%;
     box-shadow: 0px 0px 118px -31px rgba(58,33,138,0.77);
 }
@@ -460,21 +464,26 @@ form > button:hover{
     gap: 30px;
 }
 .skillList {
-    display: flex;
+    display: grid;
     gap: 50px;
     width: 100%;
-    justify-content: center;
+    grid-template-columns: 350px 350px;
+    grid-row-gap: 30px;
+    margin-top: 5%;
 }
 @media only screen and (max-width: 800px) {
     .skillList {
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
         gap: 20px;
+        width: 80%;
     }
     .skillCard {
         width: 100%;
     }
     #skills {
         height: 150vh;
+        margin-top: 5rem;
     }
     .intro {
         margin-top: 25%;
@@ -550,6 +559,7 @@ form > button:hover{
     }
     #about {
         height: 100vh;
+        margin-top: 5rem;
     }
     .about-exp {
         height: 15em;
@@ -588,10 +598,12 @@ form > button:hover{
     #projects {
         width: 100%;
         height: 250vh;
+        margin-top: 5rem;
     }
     #contact {
         width: 100%;
         height: 130vh;
+        margin-top: 5rem;
     }
     .contact-container{
         display: flex;

@@ -44,13 +44,6 @@ export default function Skills() {
                             skill = {PHP}
                             skill2 = {Laravel}
                         />
-                    </motion.div>
-                    <motion.div className="skillList"
-                        initial = {{ opacity: 0, y: 60 }}
-                        whileInView={{ opacity: 100, y: 0 }}
-                        transition={{ delay: 0.8, ease: "easeIn" }}
-                        viewport={{ once:true }}
-                    >
                         <SkillDatabase 
                             title="Database"
                             skill6 = {Mysql}
