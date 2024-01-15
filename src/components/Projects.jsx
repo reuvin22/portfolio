@@ -74,6 +74,16 @@ function Projects() {
                       prog1 = {ReactP}
                       prog2 = {CSS}
                     />
+                    <List2
+                      image = {Pawfect}
+                      title = "Pawfect Shop"
+                      link = "/"
+                      button= "Github"
+                      prog1 = {Laravel}
+                      prog2 = {Mysql}
+                      prog3 = {ReactN}
+                      prog4 = {Firebase}
+                    />
                   </div>
                 </div>
             </motion.div>

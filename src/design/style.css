@@ -227,14 +227,9 @@ body {
     font-size: 50px;
     margin-top: 2%;
 }
-.project-list-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .project-list {
-    width: 90%;
-    height: 70vh;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
 }
 .projects > h1, .projects > h3 {
     color: white;
@@ -609,7 +604,7 @@ form > button:hover{
     }
     #projects {
         width: 100%;
-        height: 250vh;
+        height: 280vh;
         margin-top: 5rem;
     }
     #contact {
