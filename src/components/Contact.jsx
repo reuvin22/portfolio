@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -8,32 +8,26 @@ import { motion } from 'framer-motion';
 
 
 function Contact() {
-    const handleForm = async(e) => {
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
+    const [subject, setSubject] = useState("");
+    const [from, setFrom] = useState("");
+    const [message, setMessage] = useState("");
 
-        try {
-            const response = await fetch('https://atsdevs.org/EmailSender/public/api/send-email',{
-                method : 'POST',
-                headers: {
-                    'Content-type': 'application/json',
-                    'Access-Control-Allow-Origin': '*'
-                },
-                body: JSON.stringify(data),
-        });
-        if(response.ok){
-            console.log("Message Sent Successfully");
-        }else {
-            console.log("Message not sent");
-        }
-        }catch(err){
-            console.log(err);
-        }
-    }
+    const handleForm = (event) => {
+        event.preventDefault();
+        event.target.value()
+    };
+    useEffect(() => {
+        const postData = async () => {
+            try {
+                const response = await axios.post('https://atsdevs.org/EmailSender/api/send-email', handleForm);
+                console.log(response.data);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+
+        postData();
+    }, [subject, from, message]);
   return (
     <>
     <section id="contact">

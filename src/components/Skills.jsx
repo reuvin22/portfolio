@@ -17,6 +17,7 @@ import GraphQL from '../images/graphql.png'
 import AWS from '../images/aws.png'
 import Docker from '../images/docker.png'
 import { motion } from 'framer-motion'
+import Tailwind from '../images/tailwind.png'
 
 export default function Skills() {
   return (
@@ -38,6 +39,7 @@ export default function Skills() {
                             skill2 = {JS}
                             skill3 = {Reacts}
                             skill4 = {ReactN}
+                            skill5 = {Tailwind}
                         />
                         <SkillCardBE 
                             title="BackEnd"

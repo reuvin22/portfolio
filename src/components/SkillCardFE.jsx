@@ -11,6 +11,7 @@ export default function SkillCardFE(props) {
             <img src={props.skill2} alt="Skills" className='imgSkill'/>
             <img src={props.skill3} alt="Skills" className='imgSkill'/>
             <img src={props.skill4} alt="Skills" className='imgSkill'/>
+            <img src={props.skill5} alt="Skills" className='imgSkill'/>
         </div>
     </div>
     </>
