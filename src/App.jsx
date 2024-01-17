@@ -7,11 +7,13 @@ import Skills from './components/Skills'
 function App() {
   return (
     <>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <div className='bg-gradient-to-r from-slate-900 to-slate-950'>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
     </>
   )
 }

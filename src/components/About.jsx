@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 function About() {
   return (
-    <section className='h-5/6 py-10 bg-gradient-to-r from-slate-900 to-slate-950'>
+    <section className='h-5/6'>
         <div className="mx-10">
                     <motion.h1
                         initial = {{ opacity: 0 }}
@@ -23,10 +23,10 @@ function About() {
                                 transition={{ delay: 1, ease: "easeIn" }}
                                 viewport={{ once:true }}
                             >
-                                    <div className="grid place-items-center  w-full text-header h-full">
+                                    <div className="grid place-items-center  w-full text-header h-full text-center">
                                         <h1 className='text-8xl'>2</h1>
                                         <h2>Years</h2><br />
-                                        <h2 className='web'>Web Development</h2><br />
+                                        <h2>Web Development</h2><br />
                                         <h2>Experience</h2>
                                     </div>
                             </motion.div>

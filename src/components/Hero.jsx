@@ -17,7 +17,7 @@ function Hero() {
   
   return (
     <>
-    <section className='h-screen bg-gradient-to-r from-slate-900 to-slate-950'>
+    <section className='h-screen'>
         <motion.div className="flex place-content-between
         xl:mx-20 xl:my-5
         lg:mx-20 lg:my-5 
