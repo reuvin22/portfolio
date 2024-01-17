@@ -13,7 +13,7 @@ function About() {
                         whileInView={{ opacity: 100 }}
                         transition={{ delay: 0.3, ease: "easeIn" }}
                         viewport={{ once:true }}
-                    className='text-header font-bold grid place-items-center my-10'>ABOUT</motion.h1>
+                    className='text-header font-bold grid place-items-center my-20'>ABOUT</motion.h1>
                     <div className="flex gap-20 
                     md:grid md:gap-5 md:place-items-center
                     sm:grid sm:gap-5 sm:place-teims-center">
@@ -51,7 +51,7 @@ function About() {
                                 <Card title="Video Editing"
                                 className="card2"
                                 logo={Editing} 
-                                descriptions="Makes your video ads looks stunning!"/>
+                                descriptions="Make your video ads look stunning!"/>
                             </motion.div>
                         </div>
                     </div>

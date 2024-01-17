@@ -4,7 +4,7 @@ export default function List2(props) {
   return (
     <>
         <div className="grid place-items center text-white bg-slate-800 w-96">
-          <img src={props.image} alt="Project Image" className='w-full h-60'/>
+          <img src={props.image} alt="Project Image" className='w-full h-72'/>
           <div className="flex justify-center align-items-center gap-x-5 my-5">
             <img src={props.prog1} alt="Tech Tools" className='img'/>
             <img src={props.prog2} alt="Tech Tools"className='img'/>

@@ -31,7 +31,7 @@ function Projects() {
                   transition={{ delay: 0.3, ease: "easeIn" }}
                   viewport={{ once:true }}
                 >
-                    <h1>Projects</h1>
+                    <h1 className='my-20'>Projects</h1>
                 </motion.div>
                 <div className="project-list-container">
                   <div className="project-list">
