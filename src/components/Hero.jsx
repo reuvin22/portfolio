@@ -62,7 +62,7 @@ function Hero() {
               viewport={{ once:true }}
             >
               <h2 className='text-header text-3xl'>Hi, I'm <span className='text-blue-500 sm:text-3xl'>Reuvin Hernandez</span></h2><br />
-              <h1 className='text-title font-bold'>Web Developer</h1><br />
+              <h1 className='text-title font-bold text-center'>Web Developer</h1><br />
               <h3 className='text-p text-center'>Passionate web developer dedicated to creating exceptional digital experiences with expertise in front-end and back-end technologies.</h3><br />
               <motion.div className="flex gap-10"
                 initial = {{ opacity: 0 }}
