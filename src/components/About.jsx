@@ -6,38 +6,40 @@ import { motion } from 'framer-motion'
 
 function About() {
   return (
-    <section id="about">
-        <div className="about-container">
+    <section className='h-5/6 py-10 bg-gradient-to-r from-slate-900 to-slate-950'>
+        <div className="mx-10">
                     <motion.h1
                         initial = {{ opacity: 0 }}
                         whileInView={{ opacity: 100 }}
                         transition={{ delay: 0.3, ease: "easeIn" }}
                         viewport={{ once:true }}
-                    >ABOUT</motion.h1>
-                    <div className="expContainer">
-                            <motion.div className="about-exp"
+                    className='text-header font-bold grid place-items-center my-10'>ABOUT</motion.h1>
+                    <div className="flex gap-20 
+                    md:grid md:gap-5 md:place-items-center
+                    sm:grid sm:gap-5 sm:place-teims-center">
+                            <motion.div className="w-full"
                                 initial = {{ opacity: 0, y: -60 }}
                                 whileInView={{ opacity: 100, y: 0 }}
                                 transition={{ delay: 1, ease: "easeIn" }}
                                 viewport={{ once:true }}
                             >
-                                    <div className="year">
-                                        <h1>2</h1>
+                                    <div className="grid place-items-center  w-full text-header h-full">
+                                        <h1 className='text-8xl'>2</h1>
                                         <h2>Years</h2><br />
                                         <h2 className='web'>Web Development</h2><br />
                                         <h2>Experience</h2>
                                     </div>
                             </motion.div>
-                        <div className="about-paragraphContainer">
-                            <motion.div className="about-paragraph"
+                        <div className="">
+                            <motion.div className="text-2xl text-white my-5"
                                 initial = {{ opacity: 0, x: -60 }}
                                 whileInView={{ opacity: 100, x: 0 }}
                                 transition={{ delay: 0.5, ease: "easeIn" }}
                                 viewport={{ once:true }}
                             >
-                            <p>I am Reuvin Hernandez, a web developer. I am passionate and dedicated to my profession, and I believe that I am equipped with the necessary skills and knowledge to make a successful project.</p>
+                            <p className='md:text-center sm:text-center'>I am Reuvin Hernandez, a web developer. I am passionate and dedicated to my profession, and I believe that I am equipped with the necessary skills and knowledge to make a successful project.</p>
                             </motion.div>
-                            <motion.div className="cards"
+                            <motion.div className="flex justify-center gap-10"
                                 initial = {{ opacity: 0, x: 60 }}
                                 whileInView={{ opacity: 100, x: 0 }}
                                 transition={{ delay: 0.5, ease: "easeIn" }}

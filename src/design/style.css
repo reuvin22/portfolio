@@ -36,10 +36,10 @@ body {
     height: 100px;
     min-width: 150px;
 }
-.burger{
+/* .burger{
     display: none;
     position: absolute;
-}
+} */
 .openBurger{
     display: none;
 }
@@ -181,11 +181,7 @@ body {
     display: grid;
     place-items: center;
 }
-.cards {
-    width: 100%;
-    display: flex;
-    gap: 5%;
-}
+
 .card {
     border-radius: 10px;
     display: grid;
@@ -508,13 +504,13 @@ form > button:hover{
    .navbar{
     display: none;
    }
-   .burger {
+   /* .burger {
     display: block;
     width: 70px;
     margin-left: 65%;
     margin-top: 1%;
     cursor: pointer;
-   }
+   } */
    .navBar-container img{
      visibility:visible;
    }

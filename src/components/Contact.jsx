@@ -8,26 +8,35 @@ import { motion } from 'framer-motion';
 
 
 function Contact() {
-    const [subject, setSubject] = useState("");
-    const [from, setFrom] = useState("");
-    const [message, setMessage] = useState("");
+    const [formData, setFormData] = useState({
+        subject: '',
+        from: '',
+        email: ''
+    });
+
+    const handleInput = (event) => {
+        const { name, value } = event.target;
+        setFormData(prevFormData => ({
+            ...prevFormData, [name]: value
+        }));
+    }
 
     const handleForm = (event) => {
-        event.preventDefault();
-        event.target.value()
-    };
-    useEffect(() => {
-        const postData = async () => {
-            try {
-                const response = await axios.post('https://atsdevs.org/EmailSender/api/send-email', handleForm);
-                console.log(response.data);
-            } catch (err) {
-                console.error(err);
+        event.preventDefault;
+        const sendData = async () => {
+            try{
+                axios.post('', formData, {
+                    headers: {
+                        'Content-type': 'application/json'
+                    }
+                })
+            }catch(e){
+                console.error(e)
             }
-        };
-
-        postData();
-    }, [subject, from, message]);
+        }
+        sendData();
+    }
+    
   return (
     <>
     <section id="contact">
@@ -89,11 +98,11 @@ function Contact() {
             >
                 <form onSubmit={handleForm}>
                     <p>Subject</p>
-                    <input type="text" name="subject" placeholder='Subject' />
+                    <input type="text" name="subject" placeholder='Subject' value={formData.subject} onChange={handleInput}/>
                     <p>From</p>
-                    <input type="text" name="from" placeholder='Your Working Email' />
+                    <input type="text" name="from" placeholder='Your Working Email' value={formData.from} onChange={handleInput}/>
                     <p>Message</p>
-                    <textarea name="email" placeholder='Type your Message...' className='message'/>
+                    <textarea name="email" placeholder='Type your Message...' className='message' value={formData.email} onChange={handleInput}/>
                     <button type="submit">Send</button>
                 </form>
             </motion.div>
