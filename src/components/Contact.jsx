@@ -49,7 +49,6 @@ function Contact() {
             <p className='text-center text-3xl'>Got a Project? Let's talk</p>
         </motion.div>
         <div className="flex justify-center align-items-center gap-72
-        md:flex-col-reverse md:gap-20
         sm:flex-col-reverse sm:gap-20">
             <motion.div className="grid place-items-center"
                 initial = {{ opacity: 0, x: -60}}
