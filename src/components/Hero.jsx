@@ -31,9 +31,9 @@ function Hero() {
           <img src={Burger} 
             alt="Burger Button" 
             className="md:hidden lg:hidden xl:hidden
-            sm:w-20 sm:h-20 
+            sm:w-14 sm:h-14
             cursor-pointer 
-            my-5"
+            my-7"
             onClick={handleBurgerClick}/>
           <div className="flex gap-10 text-2xl place-items-center mx-10 sm:hidden">
             <a href="/" className='navLinks'>Home</a>
@@ -61,7 +61,7 @@ function Hero() {
               whileInView={{opacity: 100, x: 0}}
               viewport={{ once:true }}
             >
-              <h2 className='text-header text-3xl'>Hi, I'm <span className='text-blue-500 sm:text-3xl'>Reuvin Hernandez</span></h2><br />
+              <h2 className='text-header text-3xl sm:text-center'>Hi, I'm <span className='text-blue-500 sm:text-3xl'>Reuvin Hernandez</span></h2><br />
               <h1 className='text-title font-bold text-center'>Web Developer</h1><br />
               <h3 className='text-p text-center'>Passionate web developer dedicated to creating exceptional digital experiences with expertise in front-end and back-end technologies.</h3><br />
               <motion.div className="flex gap-10"
