@@ -40,7 +40,7 @@ function Contact() {
   return (
     <>
     <section className="h-11/12 w-screen my-20">
-        <motion.div className="my-10 text-white"
+        <motion.div className="my-10 text-white grid place-items-center"
         initial = {{ opacity: 0 }}
         whileInView={{ opacity: 100 }}
         transition={{ delay: 0.3 , ease: "easeIn" }}
@@ -48,8 +48,10 @@ function Contact() {
             <h1 className='text-center font-bold text-4xl'>Contact</h1>
             <p className='text-center text-3xl'>Got a Project? Let's talk</p>
         </motion.div>
-        <div className="sm:grid sm:place-items-center md:grid md:place-items-center xl:flex lg:flex gap-80 sm:gap-10 md:gap-10 ">
-            <motion.div className="grid place-items-center mx-24"
+        <div className="flex justify-center align-items-center gap-72
+        md:flex-col-reverse md:gap-20
+        sm:flex-col-reverse sm:gap-20">
+            <motion.div className="grid place-items-center"
                 initial = {{ opacity: 0, x: -60}}
                 whileInView={{ opacity: 100, x:0 }}
                 transition={{ delay: 0.5, ease: "easeIn" }}
@@ -90,7 +92,7 @@ function Contact() {
                     </div>
                 </div>
             </motion.div>
-            <motion.div className="w-96"
+            <motion.div className="w-96 grid place-items-center"
                 initial = {{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 100, y: 0 }}
                 transition={{ delay: 0.4, ease: "easeIn" }}

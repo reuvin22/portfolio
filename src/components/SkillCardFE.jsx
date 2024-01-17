@@ -3,7 +3,7 @@ import React from 'react'
 export default function SkillCardFE(props) {
   return (
     <>
-    <div className="bg-slate-800 h-56 rounded-xl">
+    <div className="bg-slate-800 h-64 rounded-xl w-96">
         <h1 className='text-center my-3'>{props.title}</h1>
         <div className='grid grid-cols-3 gap-y-5 place-items-center'>
             <img src={props.skill} alt="Skills" className='img'/>
