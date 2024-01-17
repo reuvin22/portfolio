@@ -37,23 +37,21 @@ function Hero() {
             onClick={handleBurgerClick}/>
           <div className="flex gap-10 text-2xl place-items-center mx-10 sm:hidden">
             <a href="/" className='navLinks'>Home</a>
-            <a href="#about" className='navLinks'>About</a>
-            <a href="#projects" className='navLinks'>Projects</a>
-            <a href="#contact" className='navLinks'>Contact</a>
+            <a href="#abouts" className='navLinks'>About</a>
+            <a href="#proj" className='navLinks'>Projects</a>
+            <a href="#contacts" className='navLinks'>Contact</a>
           </div>
         </motion.div>
-        <div className="openBurger" 
-          style={{ display: burger ? 'block' : 'none'}} 
-          >
+        <div className={`absolute h-96 w-screen bg-slate-900 mb-20 border-2 ${burger ? 'block' : 'hidden'}`} >
             <img src={X} 
               alt="Close Burger" 
-              className='x'
+              className='h-10 w-10 absolute ml-72 mt-5'
               onClick={handleCloseClick}/>
-            <div className="navbarBurger">
+            <div className="grid place-items-center h-full mt-5 text-2xl">
               <a href="/" className='navLinks'>Home</a>
-              <a href="#about" className='navLinks'>About</a>
-              <a href="#projects" className='navLinks'>Projects</a>
-              <a href="#contact" className='navLinks'>Contact</a>
+              <a href="#abouts" className='navLinks'>About</a>
+              <a href="#proj" className='navLinks'>Projects</a>
+              <a href="#contacts" className='navLinks'>Contact</a>
             </div>
           </div>
         <div className='w-11/15 grid place-items-center my-20'>
@@ -71,7 +69,7 @@ function Hero() {
                 animate = {{ opacity: 100 }}
                 transition={{ delay: 1 }}
               >
-                <a href={Cv}download="Reuvin H.pdf" target='__blank' rel="noopener noreferrer"><button className='button'>Download CV</button></a><button className='button'>Message Me</button>
+                <a href={Cv}download="Reuvin H.pdf" target='__blank' rel="noopener noreferrer"><button className='button'>Download CV</button></a><a href="#contacts"><button className='button'>Message Me</button></a>
               </motion.div>
           </motion.div>
         </div>

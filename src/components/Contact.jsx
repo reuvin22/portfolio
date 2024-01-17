@@ -39,7 +39,7 @@ function Contact() {
     
   return (
     <>
-    <section className="h-11/12 w-screen my-20">
+    <section id="contacts" className="h-11/12 w-screen my-20">
         <motion.div className="my-10 text-white grid place-items-center mt-20"
         initial = {{ opacity: 0 }}
         whileInView={{ opacity: 100 }}

@@ -18,7 +18,7 @@ import CSS from '../images/css.png'
 function Projects() {
   return (
     <>
-        <section className='h-full w-screen my-10'>
+        <section id="proj" className='h-full w-screen my-10'>
             <motion.div className="project-container"
               initial = {{ opacity: 0 }}
               whileInView={{ opacity: 100 }}
