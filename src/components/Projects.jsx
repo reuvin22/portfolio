@@ -18,7 +18,7 @@ import CSS from '../images/css.png'
 function Projects() {
   return (
     <>
-        <section id="projects">
+        <section className='h-full w-screen my-10'>
             <motion.div className="project-container"
               initial = {{ opacity: 0 }}
               whileInView={{ opacity: 100 }}
@@ -73,16 +73,6 @@ function Projects() {
                       button2="Live"
                       prog1 = {ReactP}
                       prog2 = {CSS}
-                    />
-                    <List2
-                      image = {Pawfect}
-                      title = "Pawfect Shop"
-                      link = "/"
-                      button= "Github"
-                      prog1 = {Laravel}
-                      prog2 = {Mysql}
-                      prog3 = {ReactN}
-                      prog4 = {Firebase}
                     />
                   </div>
                 </div>

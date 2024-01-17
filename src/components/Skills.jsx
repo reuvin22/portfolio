@@ -22,11 +22,12 @@ import Tailwind from '../images/tailwind.png'
 export default function Skills() {
   return (
     <>
-        <section id='skills'>
+        <section className='my-20 h-full w-screen'>
             <div className="mySkills">
                 <div className='list'>
                     <h1>My Skills</h1>
-                    <motion.div className="skillList"
+                    <motion.div className="grid grid-cols-2 gap-y-5 gap-x-5
+                    sm:grid-cols-1 text-white text-3xl font-bold"
                         initial = {{ opacity: 0, x: -100 }}
                         whileInView={{ opacity: 100, x: 0 }}
                         transition={{ delay: 0.5, ease: "easeIn" }}

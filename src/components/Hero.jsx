@@ -17,7 +17,7 @@ function Hero() {
   
   return (
     <>
-    <section className='h-screen'>
+    <section className='h-screen w-screen'>
         <motion.div className="flex place-content-between
         xl:mx-20 xl:my-5
         lg:mx-20 lg:my-5 
@@ -27,11 +27,13 @@ function Hero() {
           whileInView={{opacity: 100}}
           viewport={{ once:true }}
         >
-          <img src={NameLogo} alt="Name Logo" className='h-32 w-32 my-1'/>
+          <img src={NameLogo} alt="Name Logo" className='h-32 w-32 my-1 sm:h-28 sm:w-28'/>
           <img src={Burger} 
             alt="Burger Button" 
             className="md:hidden lg:hidden xl:hidden
-            sm:w-20 sm:h-20 cursor-pointer my-5"
+            sm:w-20 sm:h-20 
+            cursor-pointer 
+            my-5"
             onClick={handleBurgerClick}/>
           <div className="flex gap-10 text-2xl place-items-center mx-10 sm:hidden">
             <a href="/" className='navLinks'>Home</a>

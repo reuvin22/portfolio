@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 function About() {
   return (
-    <section className='h-5/6'>
+    <section className='h-5/6 my-10 w-screen'>
         <div className="mx-10">
                     <motion.h1
                         initial = {{ opacity: 0 }}

@@ -5,8 +5,8 @@ function Card(props) {
     <>
         <div className="card">
             <img src={props.logo} alt="Logo" className={props.class}/>
-            <h2>{props.title}</h2>
-            <p>{props.descriptions}</p>
+            <h2 className='text-center'>{props.title}</h2>
+            <p className='text-center'>{props.descriptions}</p>
         </div>
     </>
   )

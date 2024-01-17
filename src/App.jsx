@@ -7,7 +7,7 @@ import Skills from './components/Skills'
 function App() {
   return (
     <>
-      <div className='bg-gradient-to-r from-slate-900 to-slate-950'>
+      <div className='bg-gradient-to-r from-slate-900 to-slate-950 overflow-x-hidden'>
         <Hero />
         <About />
         <Skills />

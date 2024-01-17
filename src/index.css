@@ -35,3 +35,23 @@
     ease-in-out
     hover:shadow-3xl
 }
+.img {
+    @apply
+    w-16 h-16
+}
+.smImg {
+    @apply
+    h-24 w-32
+}
+.input {
+    @apply
+    h-12 w-80 border-2 border-white bg-slate-900 p-3
+    focus:shadow-fuchsia-900
+    text-white
+}
+.inputArea {
+    @apply
+    h-24 w-80 border-2 border-white bg-slate-900 p-3
+    focus:shadow-fuchsia-950
+    text-white
+}

@@ -316,19 +316,19 @@ form {
     display: grid;
     width: 100%;
 }
-form > input{
+/* form > input{
     width: 80%;
     height: 50px;
     padding-left: 20px;
     background-color: rgb(13, 13, 13);
     border: 1px solid white;
     color: white;
-}
-form > input:focus{
+} */
+/* form > input:focus{
     border: 1px solid rgb(77, 41, 193);
     transition: 0.3s;
     box-shadow: 3px 4px 15px 4px rgba(77,41,193,0.75);
-}
+} */
 form > p {
     color: white;
     margin: 1% 1%;
