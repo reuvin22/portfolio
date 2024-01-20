@@ -52,7 +52,7 @@ function Projects() {
                       title = "Alumni Tracking System"
                       link = "https://github.com/reuvin22/AlumniTrackingSystem.git"
                       button= "Github"
-                      link2 = "https://atsdevs.org/ats/index.php"
+                      link2 = "https://atsdevs.org/ATS/index.php"
                       button2 = "Live"
                       prog1 = {PHP}
                       prog2 = {Mysql}
