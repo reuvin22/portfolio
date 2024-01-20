@@ -1,6 +1,6 @@
 import React from 'react'
 
-function List3() {
+function List3(props) {
   return (
     <div className="grid place-items center text-white bg-slate-800 w-96">
           <img src={props.image} alt="Project Image" className='w-full h-72'/>
