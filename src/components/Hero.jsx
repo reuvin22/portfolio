@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import NameLogo from '../images/Logo1.png'
-import Cv from '../components/Reuvin H..pdf'
+import Cv from './Reuvin.H.pdf'
 import Burger from '../images/burger.png'
 import X from '../images/x.png'
 import { motion } from 'framer-motion'
@@ -69,7 +69,7 @@ function Hero() {
                 animate = {{ opacity: 100 }}
                 transition={{ delay: 1 }}
               >
-                <a href={Cv}download="Reuvin H.pdf" target='__blank' rel="noopener noreferrer"><button className='button'>Download CV</button></a><a href="#contacts"><button className='button'>Message Me</button></a>
+                <a href={Cv} download="Reuvin H.pdf" target='__blank' rel="noopener noreferrer"><button className='button'>Download CV</button></a><a href="#contacts"><button className='button'>Message Me</button></a>
               </motion.div>
           </motion.div>
         </div>
