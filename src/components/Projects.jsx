@@ -16,6 +16,7 @@ import Firebase from '../images/firebase.png'
 import CSS from '../images/css.png'
 import DOST from '../images/DOST.png'
 import Tailwind from '../images/tailwind.png'
+import List3 from './List3'
 
 function Projects() {
   return (
@@ -76,11 +77,13 @@ function Projects() {
                       prog1 = {ReactP}
                       prog2 = {CSS}
                     />
-                    <List2
+                    <List3
                       image = {DOST}
                       title = "DOST Attendance Form"
                       link = "https://github.com/reuvin22/dostFe"
+                      link2 = "https://dost-fe-reuvin22s-projects.vercel.app/"
                       button= "Github"
+                      button2="Live"
                       prog1 = {Laravel}
                       prog2 = {Mysql}
                       prog3 = {ReactP}
