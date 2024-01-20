@@ -14,6 +14,8 @@ import ReactP from '../images/react.png'
 import ReactN from '../images/reactN.png'
 import Firebase from '../images/firebase.png'
 import CSS from '../images/css.png'
+import DOST from '../images/DOST.png'
+import Tailwind from '../images/tailwind.png'
 
 function Projects() {
   return (
@@ -73,6 +75,16 @@ function Projects() {
                       button2="Live"
                       prog1 = {ReactP}
                       prog2 = {CSS}
+                    />
+                    <List2
+                      image = {DOST}
+                      title = "DOST Attendance Form"
+                      link = "/"
+                      button= "Github"
+                      prog1 = {Laravel}
+                      prog2 = {Mysql}
+                      prog3 = {ReactP}
+                      prog4 = {Tailwind}
                     />
                   </div>
                 </div>
