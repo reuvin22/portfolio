@@ -79,7 +79,7 @@ function Projects() {
                     <List2
                       image = {DOST}
                       title = "DOST Attendance Form"
-                      link = "/"
+                      link = "https://github.com/reuvin22/dostFe"
                       button= "Github"
                       prog1 = {Laravel}
                       prog2 = {Mysql}
