@@ -4,14 +4,15 @@ import { faFacebookF, faLinkedinIn, faInstagram } from '@fortawesome/free-brands
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 
 
 
 function Contact() {
     const [formData, setFormData] = useState({
         subject: '',
-        from: '',
-        email: ''
+        sender: '',
+        body: ''
     });
 
     const handleInput = (event) => {
@@ -22,13 +23,18 @@ function Contact() {
     }
 
     const handleForm = (event) => {
-        event.preventDefault;
+        event.preventDefault();
         const sendData = async () => {
             try{
-                axios.post('', formData, {
+                axios.post('https://atsdevs.org/FsAPI/public/api/email', formData, {
                     headers: {
                         'Content-type': 'application/json'
                     }
+                })
+                setFormData({
+                    subject: '',
+                    sender: '',
+                    body: ''
                 })
             }catch(e){
                 console.error(e)
@@ -101,9 +107,9 @@ function Contact() {
                     <p>Subject</p>
                     <input type="text" name="subject" placeholder='Subject' value={formData.subject} onChange={handleInput} className='input'/>
                     <p>From</p>
-                    <input type="text" name="from" placeholder='Your Working Email' value={formData.from} onChange={handleInput} className='input'/>
+                    <input type="text" name="sender" placeholder='Your Working Email' value={formData.sender} onChange={handleInput} className='input'/>
                     <p>Message</p>
-                    <textarea name="email" placeholder='Type your Message...' value={formData.email} onChange={handleInput} className='inputArea'/>
+                    <textarea name="body" placeholder='Type your Message...' value={formData.body} onChange={handleInput} className='inputArea'/>
                     <button type="submit" className='border-2 py-3 px-10 border-purple-800 rounded-2xl my-5 cursor-pointer hover:bg-purple-500'>Send</button>
                 </form>
             </motion.div>
