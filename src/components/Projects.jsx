@@ -36,7 +36,7 @@ function Projects() {
                 >
                     <h1 className='my-20'>Projects</h1>
                 </motion.div>
-                <h1 className='text-center text-white text-2xl'>All of the projects are inaccessible due to changes in domain/hosting.</h1>
+                <h1 className='text-center text-white text-2xl'>All of the projects Backend are inaccessible due to changes in domain/hosting.</h1>
                 <div className="project-list-container">
                   <div className="project-list">
                     <List 
