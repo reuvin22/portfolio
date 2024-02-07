@@ -17,6 +17,9 @@ import CSS from '../images/css.png'
 import DOST from '../images/DOST.png'
 import Tailwind from '../images/tailwind.png'
 import List3 from './List3'
+import HTML from '../images/html.png'
+import JS from '../images/js.png'
+import Cite3 from '../images/cite3.png'
 
 function Projects() {
   return (
@@ -89,6 +92,15 @@ function Projects() {
                       prog2 = {Mysql}
                       prog3 = {ReactP}
                       prog4 = {Tailwind}
+                    />
+                    <List1
+                      image = {Cite3}
+                      title = "Cite 3"
+                      link = "/"
+                      button= "Github"
+                      button2= "Live"
+                      prog1 = {PHP}
+                      prog2 = {Mysql}
                     />
                   </div>
                 </div>
