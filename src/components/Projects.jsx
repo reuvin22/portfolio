@@ -95,7 +95,7 @@ function Projects() {
                     />
                     <List1
                       image = {Cite3}
-                      title = "Cite 3"
+                      title = "Cite 3 (Not 100% working)"
                       link = "/"
                       button= "Github"
                       button2= "Live"
