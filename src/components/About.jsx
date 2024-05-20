@@ -23,8 +23,8 @@ function About() {
                                 transition={{ delay: 1, ease: "easeIn" }}
                                 viewport={{ once:true }}
                             >
-                                    <div className="grid place-items-center  w-full text-header h-full text-center">
-                                        <h1 className='text-8xl'>1</h1>
+                                    <div className="text-center w-full text-header h-full">
+                                        <h1 className='text-8xl mb-5'>1</h1>
                                         <h2>Year</h2><br />
                                         <h2>Web Development</h2><br />
                                         <h2>Experience</h2>
@@ -39,7 +39,7 @@ function About() {
                             >
                             <p className='md:text-center sm:text-center'>I am Reuvin Hernandez, a web developer. I am passionate and dedicated to my profession, and I believe that I am equipped with the necessary skills and knowledge to make a successful project.</p>
                             </motion.div>
-                            <motion.div className="flex justify-center gap-10"
+                            <motion.div className="flex justify-center items-center gap-10"
                                 initial = {{ opacity: 0, x: 60 }}
                                 whileInView={{ opacity: 100, x: 0 }}
                                 transition={{ delay: 0.5, ease: "easeIn" }}

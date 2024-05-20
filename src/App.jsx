@@ -4,6 +4,8 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Skills from './components/Skills'
+import gsap from 'gsap'
+import { useLayoutEffect, useRef } from 'react'
 function App() {
   return (
     <>

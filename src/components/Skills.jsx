@@ -25,24 +25,15 @@ export default function Skills() {
         <section className='my-20 h-full w-screen'>
             <div className="mySkills">
                 <div className='list'>
-                    <h1 className='my-20'>My Skills</h1>
-                    <motion.div className="grid grid-cols-2 gap-y-20 gap-x-20
-                    sm:grid-cols-1 text-white text-3xl font-bold"
-                        initial = {{ opacity: 0, x: -100 }}
-                        whileInView={{ opacity: 100, x: 0 }}
-                        transition={{ delay: 0.5, ease: "easeIn" }}
-                        viewport={{ once:true }}
+                    <h1 className='my-20 sm:my-5'>My Skills</h1>
+                    <div className="grid grid-cols-2 gap-y-20 gap-x-20
+                    sm:grid-cols-1 text-white text-3xl sm:gap-y-5 font-bold"
                     >
                         <SkillCardFE />
-
-                        <SkillCardBE 
-                            title="BackEnd"
-                            skill = {PHP}
-                            skill2 = {Laravel}
-                        />
+                        <SkillCardBE />
                         <SkillDatabase />
                         <SkillCloud />
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>
