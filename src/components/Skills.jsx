@@ -33,32 +33,15 @@ export default function Skills() {
                         transition={{ delay: 0.5, ease: "easeIn" }}
                         viewport={{ once:true }}
                     >
-                        <SkillCardFE 
-                            title="FrontEnd"
-                            skill = {HTML}
-                            skill1 = {CSS}
-                            skill2 = {JS}
-                            skill3 = {Reacts}
-                            skill4 = {ReactN}
-                            skill5 = {Tailwind}
-                        />
+                        <SkillCardFE />
+
                         <SkillCardBE 
                             title="BackEnd"
                             skill = {PHP}
                             skill2 = {Laravel}
                         />
-                        <SkillDatabase 
-                            title="Database"
-                            skill6 = {Mysql}
-                            skill7 = {Mongo}
-                            skill8 = {Firebase}
-                            skill9 = {GraphQL}
-                        />
-                        <SkillCloud 
-                            title="Cloud & Container"
-                            skill = {AWS}
-                            skill2 = {Docker}
-                        />
+                        <SkillDatabase />
+                        <SkillCloud />
                     </motion.div>
                 </div>
             </div>
