@@ -6,15 +6,18 @@ import Contact from './components/Contact'
 import Skills from './components/Skills'
 import gsap from 'gsap'
 import { useLayoutEffect, useRef } from 'react'
+import { Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <>
       <div className='bg-gradient-to-r from-slate-900 to-slate-950 overflow-x-hidden'>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Routes>
+          <Route path='/' element={<Hero />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/skill' element={<Skills />} />
+          <Route path='/project' element={<Projects />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
       </div>
     </>
   )

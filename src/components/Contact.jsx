@@ -5,6 +5,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import Sidebar from './Sidebar';
 
 
 
@@ -46,6 +47,7 @@ function Contact() {
   return (
     <>
     <section id="contacts" className="h-11/12 w-screen my-20">
+    <Sidebar />
         <motion.div className="my-10 text-white grid place-items-center mt-20"
         initial = {{ opacity: 0 }}
         whileInView={{ opacity: 100 }}
@@ -55,7 +57,7 @@ function Contact() {
             <p className='text-center text-3xl sm:text-xl'>Got a Project? Let's talk</p>
         </motion.div>
         <div className="flex justify-center items-center gap-72
-        sm:flex-col-reverse sm:gap-20">
+        sm:flex-col-reverse sm:gap-20 md:flex-col-reverse">
             <motion.div className="grid place-items-center"
                 initial = {{ opacity: 0, x: -60}}
                 whileInView={{ opacity: 100, x:0 }}

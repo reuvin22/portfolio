@@ -1,12 +1,12 @@
 import React from 'react'
 import Card from '../components/Card'
-import Laptop from '../images/laptop.png'
-import Editing from '../images/Editing.png'
 import { motion } from 'framer-motion'
+import Sidebar from './Sidebar'
 
 function About() {
   return (
     <section id="abouts" className='h-5/6 my-10 w-screen'>
+        <Sidebar />
         <div className="mx-10">
                     <motion.h1
                         initial = {{ opacity: 0 }}
@@ -46,11 +46,11 @@ function About() {
                                 viewport={{ once:true }}
                             >
                                 <Card title="Web Development" 
-                                logo={Laptop} 
+                                logo="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Flaptop.png?alt=media&token=edc34cac-30a5-43b5-938b-3de6e6b931ae"
                                 descriptions="Turn your dream website into reality."/>
                                 <Card title="Video Editing"
                                 className="card2"
-                                logo={Editing} 
+                                logo="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FEditing.png?alt=media&token=4e9577f4-4c79-4eca-88dc-491383b60da2"
                                 descriptions="Make your video ads look stunning!"/>
                             </motion.div>
                         </div>

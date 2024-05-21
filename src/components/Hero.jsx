@@ -1,30 +1,30 @@
 import React, { useState, useEffect, useRef } from 'react';
-import NameLogo from '../images/Logo1.png';
-import Cv from './Hernandez.R.pdf';
-import Burger from '../images/burger.png';
-import X from '../images/x.png';
+import Cv from './Hernandez.R.pdf'; 
 import gsap from 'gsap';
+import Sidebar from './Sidebar';
 
 function Hero() {
   const comp = useRef(null);
-  const [burger, setBurger] = useState(false);
-
-  const handleBurgerClick = () => {
-    setBurger(!burger);
-  }
-  const handleCloseClick  = () => {
-    setBurger(false);
-  }
+  const [loading, setLoading] = useState(true)
   
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const t1 = gsap.timeline()
-      t1.from('#developer', {
+    setTimeout(() => {
+        setLoading(false)
+    }, 3000)
+      const ctx = gsap.timeline();
+      ctx.from('#loading', {
+        scale: 1.2,
+        repeat: -1,
+        yoyo: true,
+      }).from('#welcome', {
+        xPercent: '-100',
+        delay: 0.5
+      }).from('#developer', {
         yPercent: "30",
         color: "white",
-        duration: 1.5,
+        duration: 1.2,
         opacity: 0,
-        delay: 1
+        delay: 2.1
       }).from(['#logo', '#nav'], {
         xPercent: "-100",
         color: "white",
@@ -36,39 +36,21 @@ function Hero() {
         duration: 0.8,
         opacity: 0,
         delay: 0.3
-      })
-    }, comp)
+      });
+    
+    // Clear the timeout when the component unmounts
     return () => ctx.revert()
-  }, []) // Empty array ensures effect only runs on mount
-
+  }, []);
   return (
     <>
       <section className='h-screen w-screen overflow-hidden' ref={comp}>
-        <div className="flex place-content-between relative xl:mx-20 xl:my-5 lg:mx-20 lg:my-5 md:mx-10 sm:mx-10">
-          <img src={NameLogo} alt="Name Logo" className='h-32 w-32 my-1 sm:h-28 sm:w-28' id='logo'/>
-          <img src={Burger} 
-            alt="Burger Button" 
-            className="md:hidden lg:hidden xl:hidden sm:w-14 sm:h-14 cursor-pointer my-7"
-            onClick={handleBurgerClick}/>
-          <div className="flex gap-10 text-2xl place-items-center mx-10 sm:hidden" id='nav'>
-            <a href="/" className='navLinks'>Home</a>
-            <a href="#abouts" className='navLinks'>About</a>
-            <a href="#proj" className='navLinks'>Projects</a>
-            <a href="#contacts" className='navLinks'>Contact</a>
-          </div>
+        <div className={loading ? 'absolute w-full h-full bg-slate-900 z-20 grid place-items-center overflow-hidden' : 'hidden'} id='load'>
+          <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FLogo1.png?alt=media&token=f3e8428f-61f3-4cbc-9334-be41e1c498ea" alt="Loading" className='h-60 w-60 sm:w-40 sm:h-40 absolute' id='loading'/>
         </div>
-        <div className={`absolute h-96 w-screen z-20 bg-slate-900 mb-20 border-2 ${burger ? 'block' : 'hidden'}`} >
-            <img src={X} 
-              alt="Close Burger" 
-              className='h-10 w-10 absolute right-0 mt-10 mr-10'
-              onClick={handleCloseClick}/>
-            <div className="grid place-items-center h-full mt-5 text-2xl">
-              <a href="/" className='navLinks'>Home</a>
-              <a href="#abouts" className='navLinks'>About</a>
-              <a href="#proj" className='navLinks'>Projects</a>
-              <a href="#contacts" className='navLinks'>Contact</a>
-            </div>
-          </div>
+        <div className='absolute w-full h-full bg-slate-900 z-20 place-items-center overflow-hidden hidden' id='welcome'>
+          <h1>Welcome to my Portfolio</h1>
+        </div>
+        <Sidebar />
         <div className='w-11/15 grid place-items-center my-20' id='heroContainer'>
           <div>
             <span className='font-bold text-gray-800 text-[200px] z-0 absolute left-0 -rotate-12 sm:hidden md:hidden' id='developer'>DEVELOPER</span>
