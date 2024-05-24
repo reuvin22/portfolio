@@ -96,7 +96,7 @@ function Projects() {
                   <button className='text-white cursor-pointer text-xl' onClick={() => handleClick('api')}>API</button>
                   <button className='text-white cursor-pointer text-xl' onClick={() => handleClick('landingpage')}>Landing Page</button>
               </div>
-              <div className='flex items-center justify-center gap-5 sm:grid'>
+              <div className='sm:flex sm:items-center sm:justify-center lg:py-10 xl:py-10 grid grid-cols-3 place-items-center gap-5'>
                 {menu === 'fullstack' && (
                   fullstack.map((proj, index) => (
                     <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600 sm:hidden md:hidden' key={index}
