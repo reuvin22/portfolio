@@ -25,7 +25,7 @@ function Hero() {
   }, []);
   return (
     <>
-      <section className='h-screen w-screen overflow-hidden' ref={comp}>
+      <section id="home" className='h-screen w-screen overflow-hidden' ref={comp}>
         <div className='w-11/15 grid place-items-center my-20' id='heroContainer'>
             <div className="grid place-items-center h-96 w-full z-10">
               <h2 className='text-header text-3xl sm:text-center' id='intro1'>I'm <span className='text-blue-500 sm:text-3xl font-bold text-5xl' id='intro2'>Reuvin Hernandez</span></h2><br />

@@ -19,10 +19,10 @@ function Sidebar() {
             onClick={handleBurgerClick}
             id='logo'/>
           <div className="flex gap-10 text-2xl place-items-center mx-10 sm:hidden" id='nav'>
-            <Link to="/home" className='navLinks'>Home</Link>
-            <Link to="/about" className='navLinks'>About</Link>
-            <Link to="/project" className='navLinks'>Projects</Link>
-            <Link to="/contact" className='navLinks'>Contact</Link>
+            <a href='#home' className='navLinks'>Home</a>
+            <a href='#abouts' className='navLinks'>About</a>
+            <a href='#proj' className='navLinks'>Projects</a>
+            <a href='#contacts' className='navLinks'>Contact</a>
           </div>
         </div>
         <div className={`absolute h-96 w-screen z-20 bg-slate-900 mb-20 border-2 ${burger ? 'block' : 'hidden'}`} >
@@ -31,10 +31,10 @@ function Sidebar() {
               className='h-10 w-10 absolute right-0 mt-10 mr-10'
               onClick={handleCloseClick}/>
             <div className="grid place-items-center h-full mt-5 text-2xl">
-              <Link to="/home" className='navLinks'>Home</Link>
-              <Link to="/about" className='navLinks'>About</Link>
-              <Link to="/project" className='navLinks'>Projects</Link>
-              <Link to="/contact" className='navLinks'>Contact</Link>
+              <a href='#home' className='navLinks'>Home</a>
+              <a href='#abouts' className='navLinks'>About</a>
+              <a href='#proj' className='navLinks'>Projects</a>
+              <a href='#contacts' className='navLinks'>Contact</a>
             </div>
           </div>
     </div>
