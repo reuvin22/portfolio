@@ -6,6 +6,7 @@ function Projects() {
   const [skillPage, setSkillPage] = useState(0)
   const handleClick = (data) => {
     setMenu(data)
+    setSkillPage(0)
   }
 
   const handleNextPage = () => {
@@ -110,6 +111,7 @@ function Projects() {
                     </div>
                   ))
                 )}
+                {menu === 'fullstack' && (
                 <div className='flex relative justify-center items-center gap-5 lg:hidden xl:hidden'>
                   <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === 0 ? 'hidden' : `h-12 w-12 cursor-pointer rotate-180 absolute ml-[-120%] `} onClick={() => handlePrevPage()}/>
                   {menu === 'fullstack' && (
@@ -126,6 +128,71 @@ function Projects() {
                   )}
                   <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === fullstack.length ? 'hidden' : `h-12 w-12 cursor-pointer absolute mr-[-120%]`} onClick={() => handleNextPage()}/>
                 </div>
+                )}
+                {menu === 'api' && (
+                  api.map((proj, index) => (
+                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600 sm:hidden md:hidden' key={index}
+                    onClick={() => selectedProject(index)}>
+                      <h1 className='text-center'>{proj.title}</h1>
+                      <img src={proj.img} alt="Photo" />
+                      <p className='text-center'>{proj.desc}</p>
+                      <div className='flex w-full justify-center items-center gap-5 mt-5'>
+                        <a href={proj.github}><button className='bg-green-500 h-10 w-12 rounded-md'>Github</button></a>
+                        <a href={proj.live}><button className='bg-green-500 h-10 w-12 rounded-md'>Live</button></a>
+                      </div>
+                    </div>
+                  ))
+                )}
+                {menu === 'api' && (
+                <div className='flex relative justify-center items-center gap-5 lg:hidden xl:hidden'>
+                  <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === 0 ? 'hidden' : `h-12 w-12 cursor-pointer rotate-180 absolute ml-[-120%] `} onClick={() => handlePrevPage()}/>
+                  {menu === 'api' && (
+                    <div className='max-w-60 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600 sm:h-96 '
+                    >
+                      <h1 className='text-center sm:py-3 sm:text-xl'>{api[skillPage]?.title}</h1>
+                      <img src={api[skillPage]?.img} alt="Photo" />
+                      <p className='text-center sm:py-3 sm:text-xl'>{api[skillPage]?.desc}</p>
+                      <div className='flex w-full justify-center items-center gap-5 mt-5'>
+                        <a href={api[skillPage]?.github}><button className='bg-green-500 h-10 w-12 rounded-md sm:w-20'>Github</button></a>
+                        <a href={api[skillPage]?.live}><button className='bg-green-500 h-10 w-12 rounded-md sm:w-20'>Live</button></a>
+                      </div>
+                    </div>
+                  )}
+                  <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === api.length ? 'hidden' : `h-12 w-12 cursor-pointer absolute mr-[-120%]`} onClick={() => handleNextPage()}/>
+                </div>
+                )}
+                {menu === 'landingpage' && (
+                  landingpage.map((proj, index) => (
+                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600 sm:hidden md:hidden' key={index}
+                    onClick={() => selectedProject(index)}>
+                      <h1 className='text-center'>{proj.title}</h1>
+                      <img src={proj.img} alt="Photo" />
+                      <p className='text-center'>{proj.desc}</p>
+                      <div className='flex w-full justify-center items-center gap-5 mt-5'>
+                        <a href={proj.github}><button className='bg-green-500 h-10 w-12 rounded-md'>Github</button></a>
+                        <a href={proj.live}><button className='bg-green-500 h-10 w-12 rounded-md'>Live</button></a>
+                      </div>
+                    </div>
+                  ))
+                )}
+                {menu === 'landingpage' && (
+                <div className='flex relative justify-center items-center gap-5 lg:hidden xl:hidden'>
+                  <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === 0 ? 'hidden' : `h-12 w-12 cursor-pointer rotate-180 absolute ml-[-120%] `} onClick={() => handlePrevPage()}/>
+                  {menu === 'landingpage' && (
+                    <div className='max-w-60 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600 sm:h-96 '
+                    >
+                      <h1 className='text-center sm:py-3 sm:text-xl'>{landingpage[skillPage]?.title}</h1>
+                      <img src={landingpage[skillPage]?.img} alt="Photo" />
+                      <p className='text-center sm:py-3 sm:text-xl'>{landingpage[skillPage]?.desc}</p>
+                      <div className='flex w-full justify-center items-center gap-5 mt-5'>
+                        <a href={landingpage[skillPage]?.github}><button className='bg-green-500 h-10 w-12 rounded-md sm:w-20'>Github</button></a>
+                        <a href={landingpage[skillPage]?.live}><button className='bg-green-500 h-10 w-12 rounded-md sm:w-20'>Live</button></a>
+                      </div>
+                    </div>
+                  )}
+                  <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === landingpage.length ? 'hidden' : `h-12 w-12 cursor-pointer absolute mr-[-120%]`} onClick={() => handleNextPage()}/>
+                </div>
+                )}
               </div>
             </div>
         </section>
