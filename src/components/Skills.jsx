@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { Slide } from 'react-slideshow-image'
 
 export default function Skills() {
     const [id, setId] = useState(0)
+    const [skillPage, setSkillPage] = useState(1)
     const skills = [
         {
             name: "HTML",
@@ -66,6 +68,16 @@ export default function Skills() {
     const handleOnClick = (id) => {
         setId(id)
     }
+
+    const handleNext = () => {
+        setSkillPage(skillPage + 1)
+    }
+
+    const handlePrev = () => {
+        setSkillPage(skillPage - 1)
+    }
+
+    console.log(skillPage)
   return (
     <>
         <section className='my-20 h-full w-screen'>

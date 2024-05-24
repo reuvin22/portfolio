@@ -3,9 +3,17 @@ import gsap from 'gsap'
 import Sidebar from './Sidebar'
 function Projects() {
   const [menu, setMenu] = useState('fullstack')
-
+  const [skillPage, setSkillPage] = useState(0)
   const handleClick = (data) => {
     setMenu(data)
+  }
+
+  const handleNextPage = () => {
+    setSkillPage(skillPage + 1)
+  }
+
+  const handlePrevPage = () => {
+    setSkillPage(skillPage - 1)
   }
 
   const fullstack = [{
@@ -75,12 +83,22 @@ function Projects() {
   const selectedProject = (id) => {
     console.log(id)
   }
-  const renderContent = useMemo(() => {
-    return (
-      <div className='flex items-center justify-center gap-5'>
+
+  console.log(fullstack.length)
+  console.log(skillPage)
+  return (
+    <>
+        <section id="proj" className='w-screen'>
+            <div className='w-screen border-2 grid h-[79vh] px-20 sm:px-10 md:px-10 sm:grid sm:justify-center sm:items-center py-10'>
+              <div className='flex justify-center items-center w-full gap-10'>
+                  <span className='text-white cursor-pointer text-xl' onClick={() => handleClick('fullstack')}>Full Stack</span>
+                  <span className='text-white cursor-pointer text-xl' onClick={() => handleClick('api')}>API</span>
+                  <span className='text-white cursor-pointer text-xl' onClick={() => handleClick('landingpage')}>Landing Page</span>
+              </div>
+              <div className='flex items-center justify-center gap-5 sm:grid'>
                 {menu === 'fullstack' && (
                   fullstack.map((proj, index) => (
-                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600' key={index}
+                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600 sm:hidden md:hidden' key={index}
                     onClick={() => selectedProject(index)}>
                       <h1 className='text-center'>{proj.title}</h1>
                       <img src={proj.img} alt="Photo" />
@@ -92,46 +110,23 @@ function Projects() {
                     </div>
                   ))
                 )}
-                {menu === 'api' && (
-                  api.map((proj, index) => (
-                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600' key={index}
-                    onClick={() => selectedProject(index)}>
-                      <h1 className='text-center'>{proj.title}</h1>
-                      <img src={proj.img} alt="Photo" />
-                      <p className='text-center'>{proj.desc}</p>
+                <div className='flex relative justify-center items-center gap-5 lg:hidden xl:hidden'>
+                  <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === 0 ? 'hidden' : `h-12 w-12 cursor-pointer rotate-180`} onClick={() => handlePrevPage()}/>
+                  {menu === 'fullstack' && (
+                    <div className='max-w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600 sm:h-96 '
+                    >
+                      <h1 className='text-center sm:py-3 sm:text-xl'>{fullstack[skillPage]?.title}</h1>
+                      <img src={fullstack[skillPage]?.img} alt="Photo" />
+                      <p className='text-center sm:py-3 sm:text-xl'>{fullstack[skillPage]?.desc}</p>
                       <div className='flex w-full justify-center items-center gap-5 mt-5'>
-                      <a href={proj.github}><button className='bg-green-500 h-10 w-12 rounded-md'>Github</button></a>
-                        <a href={proj.live}><button className='bg-green-500 h-10 w-12 rounded-md'>Live</button></a>
+                        <a href={fullstack[skillPage]?.github}><button className='bg-green-500 h-10 w-12 rounded-md sm:w-20'>Github</button></a>
+                        <a href={fullstack[skillPage]?.live}><button className='bg-green-500 h-10 w-12 rounded-md sm:w-20'>Live</button></a>
                       </div>
                     </div>
-                  ))
-                )}
-                {menu === 'landingpage' && (
-                  landingpage.map((proj, index) => (
-                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600' key={index}>
-                      <h1 className='text-center'>{proj.title}</h1>
-                      <img src={proj.img} alt="Photo" />
-                      <p className='text-center'>{proj.desc}</p>
-                      <div className='flex w-full justify-center items-center gap-5 mt-5'>
-                      <a href={proj.github}><button className='bg-green-500 h-10 w-12 rounded-md'>Github</button></a>
-                        <a href={proj.live}><button className='bg-green-500 h-10 w-12 rounded-md'>Live</button></a>
-                      </div>
-                    </div>
-                  ))
-                )}
+                  )}
+                  <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === fullstack.length ? 'hidden' : `h-12 w-12 cursor-pointer`} onClick={() => handleNextPage()}/>
+                </div>
               </div>
-            )
-  }, [menu])
-  return (
-    <>
-        <section id="proj" className='w-screen'>
-            <div className='w-screen h-[79vh] px-20 sm:px-10 md:px-10 sm:flex sm:justify-center sm:items-center py-10'>
-              <div className='flex justify-center items-center w-full gap-10 mb-10'>
-                  <span className='text-white cursor-pointer text-xl' onClick={() => handleClick('fullstack')}>Full Stack</span>
-                  <span className='text-white cursor-pointer text-xl' onClick={() => handleClick('api')}>API</span>
-                  <span className='text-white cursor-pointer text-xl' onClick={() => handleClick('landingpage')}>Landing Page</span>
-              </div>
-              {renderContent}
             </div>
         </section>
     </>
