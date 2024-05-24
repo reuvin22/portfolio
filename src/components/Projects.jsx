@@ -118,7 +118,7 @@ function Projects() {
               <div className='flex items-center justify-center gap-5 sm:grid'>
                 {menu === 'fullstack' && (
                   fullstack.map((proj, index) => (
-                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600 sm:hidden md:hidden' key={index}
+                    <div className='w-60 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600 sm:hidden md:hidden' key={index}
                     onClick={() => selectedProject(index)}>
                       <h1 className='text-center'>{proj.title}</h1>
                       <img src={proj.img} alt="Photo" />
