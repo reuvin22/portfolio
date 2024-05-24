@@ -90,7 +90,7 @@ function Projects() {
   return (
     <>
         <section id="proj" className='w-screen'>
-            <div className='w-screen border-2 grid h-[79vh] px-20 sm:px-10 md:px-10 sm:grid sm:justify-center sm:items-center py-10'>
+            <div className='w-screen grid h-[79vh] px-20 sm:px-10 md:px-10 sm:grid sm:justify-center sm:items-center py-10'>
               <div className='flex justify-center items-center w-full gap-10'>
                   <button className='text-white cursor-pointer text-xl' onClick={() => handleClick('fullstack')}>Full Stack</button>
                   <button className='text-white cursor-pointer text-xl' onClick={() => handleClick('api')}>API</button>
