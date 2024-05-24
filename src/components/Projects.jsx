@@ -72,12 +72,16 @@ function Projects() {
     live: ""
   }]
 
+  const selectedProject = (id) => {
+    console.log(id)
+  }
   const renderContent = useMemo(() => {
     return (
       <div className='flex items-center justify-center gap-5'>
                 {menu === 'fullstack' && (
                   fullstack.map((proj, index) => (
-                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden' key={index}>
+                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600' key={index}
+                    onClick={() => selectedProject(index)}>
                       <h1 className='text-center'>{proj.title}</h1>
                       <img src={proj.img} alt="Photo" />
                       <p className='text-center'>{proj.desc}</p>
@@ -90,7 +94,8 @@ function Projects() {
                 )}
                 {menu === 'api' && (
                   api.map((proj, index) => (
-                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden' key={index}>
+                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600' key={index}
+                    onClick={() => selectedProject(index)}>
                       <h1 className='text-center'>{proj.title}</h1>
                       <img src={proj.img} alt="Photo" />
                       <p className='text-center'>{proj.desc}</p>
@@ -103,7 +108,7 @@ function Projects() {
                 )}
                 {menu === 'landingpage' && (
                   landingpage.map((proj, index) => (
-                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden' key={index}>
+                    <div className='w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600' key={index}>
                       <h1 className='text-center'>{proj.title}</h1>
                       <img src={proj.img} alt="Photo" />
                       <p className='text-center'>{proj.desc}</p>
@@ -119,9 +124,8 @@ function Projects() {
   }, [menu])
   return (
     <>
-        <section id="proj" className='h-full w-screen my-10'>
-        <Sidebar />
-            <div className='border-8 w-screen h-[80vh] px-20 sm:px-10 md:px-10 sm:flex sm:justify-center sm:items-center py-10'>
+        <section id="proj" className='w-screen'>
+            <div className='w-screen h-[79vh] px-20 sm:px-10 md:px-10 sm:flex sm:justify-center sm:items-center py-10'>
               <div className='flex justify-center items-center w-full gap-10 mb-10'>
                   <span className='text-white cursor-pointer text-xl' onClick={() => handleClick('fullstack')}>Full Stack</span>
                   <span className='text-white cursor-pointer text-xl' onClick={() => handleClick('api')}>API</span>
