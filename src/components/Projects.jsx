@@ -113,7 +113,7 @@ function Projects() {
                 <div className='flex relative justify-center items-center gap-5 lg:hidden xl:hidden'>
                   <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === 0 ? 'hidden' : `h-12 w-12 cursor-pointer rotate-180 absolute ml-[-120%] `} onClick={() => handlePrevPage()}/>
                   {menu === 'fullstack' && (
-                    <div className='max-w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600 sm:h-96 '
+                    <div className='max-w-60 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer hover:bg-fuchsia-600 sm:h-96 '
                     >
                       <h1 className='text-center sm:py-3 sm:text-xl'>{fullstack[skillPage]?.title}</h1>
                       <img src={fullstack[skillPage]?.img} alt="Photo" />
