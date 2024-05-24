@@ -69,13 +69,13 @@ export default function Skills() {
   return (
     <>
         <section className='my-20 h-full w-screen'>
-            <div className='px-24 grid place-items-center gap-y-10'>
+            <div className='px-24 grid place-items-center gap-y-10 sm:px-0'>
                 <h1 className='font-bold text-white text-4xl'>My Skills</h1>
                 <div className='grid place-items-center gap-y-5'>
-                    <img src={skills[id]?.img} alt="Skill Image" className='max-h-36'/>
-                    <span className='font-bold text-4xl text-white'>{skills[id]?.name}</span>
+                    <img src={skills[id]?.img} alt="Skill Image" className='max-h-36 sm:max-h-20'/>
+                    <span className='font-bold text-4xl text-white sm:text-2xl'>{skills[id]?.name}</span>
                 </div>
-                <div class="w-96 bg-gray-200 rounded-full dark:bg-gray-700">
+                <div class="w-96 bg-gray-200 rounded-full dark:bg-gray-700 sm:w-60 md:w-60">
                         <div className={`bg-blue-600 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-full`} style={{ width: `${skills[id]?.percent}` }}>{skills[id]?.percent}</div>
                 </div>
                 <div className='grid grid-cols-5 gap-x-5 gap-y-10 w-[80%] place-items-center'>
