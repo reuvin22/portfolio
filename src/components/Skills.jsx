@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { Slide } from 'react-slideshow-image'
-
+import React, { useEffect, useState } from 'react'
+import gsap from 'gsap'
 export default function Skills() {
     const [id, setId] = useState(0)
     const [skillPage, setSkillPage] = useState(1)
@@ -65,40 +64,52 @@ export default function Skills() {
 
     ]
 
+    useEffect(() => {
+        const aboutTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#skills',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        });
+    
+        aboutTimeline.from('#mySkills', {
+          xPercent: '-10',
+          duration: 0.5,
+          opacity: 0,
+        }).from(['#skillImg', '#skillPercent', '#skillList'], {
+          xPercent: '20',
+          opacity: 0,
+          duration: 0.5,
+          delay: 0.5,
+        });
+        return () => aboutTimeline.kill();
+      }, []);
+
     const handleOnClick = (id) => {
         setId(id)
     }
-
-    const handleNext = () => {
-        setSkillPage(skillPage + 1)
-    }
-
-    const handlePrev = () => {
-        setSkillPage(skillPage - 1)
-    }
-
-    console.log(skillPage)
   return (
     <>
-        <section className='my-20 h-full w-screen'>
-            <div className='px-24 grid place-items-center gap-y-10 sm:px-0'>
-                <h1 className='font-bold text-white text-4xl'>My Skills</h1>
-                <div className='grid place-items-center gap-y-5'>
+            <div className='px-24 sm:px-0 bg-gradient-to-r from-slate-900 to-slate-950 h-full w-full'>
+                <h1 className='font-bold text-white text-4xl text-center mb-10' id='mySkills'>My Skills</h1>
+                <div className='grid place-items-center gap-y-5' id='skillImg'>
                     <img src={skills[id]?.img} alt="Skill Image" className='max-h-36 sm:max-h-20'/>
                     <span className='font-bold text-4xl text-white sm:text-2xl'>{skills[id]?.name}</span>
                 </div>
-                <div class="w-96 bg-gray-200 rounded-full dark:bg-gray-700 sm:w-60 md:w-60">
-                        <div className={`bg-blue-600 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-full`} style={{ width: `${skills[id]?.percent}` }}>{skills[id]?.percent}</div>
-                </div>
-                <div className='grid grid-cols-5 gap-x-5 gap-y-10 w-[80%] place-items-center'>
-                {skills.map((skill, index) => 
-                    (<div key={index}>
-                        <img src={skill.img} alt="Skills" className='h-12 w-12 rounded-full cursor-pointer hover:scale-150 duration-75' onClick={() => handleOnClick(index)}/>
-                    </div>)
-                )}
+                <div className='grid place-items-center'>
+                    <div class="w-96 my-5 grid bg-gray-200 rounded-full dark:bg-gray-700 sm:w-60 md:w-60" id='skillPercent'>
+                            <div className={`bg-blue-600 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-full`} style={{ width: `${skills[id]?.percent}` }}>{skills[id]?.percent}</div>
+                    </div>
+                    <div className='my-10 grid grid-cols-5 gap-x-5 gap-y-10 w-[80%] place-items-center' id='skillList'>
+                    {skills.map((skill, index) => 
+                        (<div key={index}>
+                            <img src={skill.img} alt="Skills" className='h-12 w-12 rounded-full cursor-pointer hover:scale-150 duration-75' onClick={() => handleOnClick(index)}/>
+                        </div>)
+                    )}
+                    </div>
                 </div>
             </div>
-        </section>
     </>
   )
 }

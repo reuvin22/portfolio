@@ -5,6 +5,7 @@ import Card from '../components/Card';
 import Sidebar from './Sidebar';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import Skills from './Skills';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,7 +36,7 @@ function About() {
       duration: 0.5,
       delay: 0.5,
     });
-    return () => aboutTimeline.kill(); // Cleanup timeline
+    return () => aboutTimeline.kill();
   }, []);
 
   const handleExp = (data) => {
@@ -217,6 +218,7 @@ function About() {
             </div>
           </div>
       </div>
+      <Skills />
     </section>
   );
 }
