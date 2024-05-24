@@ -45,7 +45,7 @@ function Projects() {
   }]
   const api = [{
     title: "Findspot API",
-    img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Ffindspot.png?alt=media&token=14850e1f-ab93-4d06-a85a-f414366e0a82",
+    img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Ffindspot%20(1)%20(1).png?alt=media&token=ea4d5204-e514-485b-9bf0-d98f6bdfe19d",
     desc: "test test",
     github: "",
     live: ""
