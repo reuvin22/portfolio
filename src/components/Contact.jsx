@@ -6,16 +6,17 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 import Sidebar from './Sidebar';
+import { toast, ToastContainer } from 'react-toastify';
 
 
 
 function Contact() {
     const [formData, setFormData] = useState({
         subject: '',
-        sender: '',
-        body: ''
+        email: '',
+        message: ''
     });
-
+    const [success, setSuccess] = useState('')
     const handleInput = (event) => {
         const { name, value } = event.target;
         setFormData(prevFormData => ({
@@ -27,15 +28,20 @@ function Contact() {
         event.preventDefault();
         const sendData = async () => {
             try{
-                axios.post('https://atsdevs.org/FsAPI/public/api/email', formData, {
+                axios.post('https://atsdevs.org/portEmail/public/api/email', formData, {
                     headers: {
                         'Content-type': 'application/json'
                     }
+                }).then(res => {
+                    if(res.data.status === 200){
+                        setSuccess(res.data.message)
+                    }
+                    console.log(res)
                 })
                 setFormData({
                     subject: '',
-                    sender: '',
-                    body: ''
+                    email: '',
+                    message: ''
                 })
             }catch(e){
                 console.error(e)
@@ -104,13 +110,15 @@ function Contact() {
                 transition={{ delay: 0.4, ease: "easeIn" }}
                 viewport={{ once:true }}
             >
+
                 <form onSubmit={handleForm}>
+                    <h2 className='text-green-500 font-bold text-lg'>{success}</h2>
                     <p>Subject</p>
                     <input type="text" name="subject" placeholder='Subject' value={formData.subject} onChange={handleInput} className='input'/>
                     <p>From</p>
-                    <input type="text" name="sender" placeholder='Your Working Email' value={formData.sender} onChange={handleInput} className='input'/>
+                    <input type="text" name="email" placeholder='Your Working Email' value={formData.email} onChange={handleInput} className='input'/>
                     <p>Message</p>
-                    <textarea name="body" placeholder='Type your Message...' value={formData.body} onChange={handleInput} className='inputArea'/>
+                    <textarea name="message" placeholder='Type your Message...' value={formData.message} onChange={handleInput} className='inputArea'/>
                     <button type="submit" className='border-2 py-3 px-10 border-purple-800 rounded-2xl my-5 cursor-pointer hover:bg-purple-500'>Send</button>
                 </form>
             </motion.div>

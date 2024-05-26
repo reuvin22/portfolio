@@ -21,13 +21,13 @@ function Projects() {
     title: "Alumni Tracking System",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Fats.png?alt=media&token=756ce7b1-2f60-4a3f-95ac-b980e12639c8",
     desc: "OJT Project",
-    github: "",
+    github: "https://github.com/reuvin22/atsfe",
     live: ""
   },{
     title: "Tourism Management System",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FtourismPic.png?alt=media&token=6bdb93ef-9eab-4862-84b9-6795600beab9",
     desc: "Freelancing Project",
-    github: "",
+    github: "https://github.com/reuvin22/tourismlaguna",
     live: ""
   },{
     title: "Cite",
@@ -40,14 +40,14 @@ function Projects() {
     title: "DOST Attendance Form",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FDOST.png?alt=media&token=16a95feb-a89b-4357-b401-64466d728123",
     desc: "OJT Project",
-    github: "",
+    github: "https://github.com/reuvin22/dostFe",
     live: ""
   }]
   const api = [{
     title: "Findspot API",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Ffindspot%20(1)%20(1).png?alt=media&token=ea4d5204-e514-485b-9bf0-d98f6bdfe19d",
     desc: "test test",
-    github: "",
+    github: "https://github.com/reuvin22/FindSpot",
     live: ""
   },{
     title: "Camp Connection API",
@@ -59,7 +59,7 @@ function Projects() {
     title: "TraPinas",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FladingPage.png?alt=media&token=23b25346-6880-4e2d-a963-1344a99be50e",
     desc: "test test",
-    github: "",
+    github: "https://github.com/reuvin22/travel",
     live: ""
   }]
 
