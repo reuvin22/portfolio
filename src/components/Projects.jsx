@@ -214,10 +214,17 @@ function Projects() {
                       <div className='flex relative justify-center items-center gap-5 lg:hidden xl:hidden'>
                       <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === 0 ? 'hidden' : `h-12 w-12 cursor-pointer rotate-180 absolute ml-[-120%] `} onClick={() => handlePrevPage()}/>
                       {menu === 'fullstack' && (
-                        <div className='max-w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer sm:h-96 '
+                        <div className='max-w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer sm:h-[450px]'
                         >
                           <h1 className='text-center sm:py-3 sm:text-xl mt-3'>{fullstack[skillPage]?.title}</h1>
                           <img src={fullstack[skillPage]?.img} alt="Photo" />
+                          <div className='flex justify-center items-center gap-5 my-5'>
+                            {fullstack[skillPage].tech?.map((image, index) => {
+                              return (
+                                <img src={image} alt="Tech Stack" className='rounded-full w-10 h-10' key={index}/>
+                              )
+                            })}
+                          </div>
                           <p className='text-center sm:py-3 sm:text-xl'>{fullstack[skillPage]?.desc}</p>
                           <div className='flex w-full justify-center items-center gap-5 mt-5'>
                             <a href={fullstack[skillPage]?.github}><button className='hover:bg-blue-700 bg-blue-500 h-10 w-12 rounded-md sm:w-20'>Github</button></a>
@@ -232,10 +239,17 @@ function Projects() {
                       <div className='flex relative justify-center items-center gap-5 lg:hidden xl:hidden'>
                       <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === 0 ? 'hidden' : `h-12 w-12 cursor-pointer rotate-180 absolute ml-[-120%] `} onClick={() => handlePrevPage()}/>
                       {menu === 'api' && (
-                        <div className='max-w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer sm:h-96 '
+                        <div className='max-w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer sm:h-[450px] '
                         >
                           <h1 className='text-center sm:py-3 sm:text-xl mt-3'>{api[skillPage]?.title}</h1>
                           <img src={api[skillPage]?.img} alt="Photo" />
+                          <div className='flex justify-center items-center gap-5 my-5'>
+                            {api[skillPage].tech?.map((image, index) => {
+                              return (
+                                <img src={image} alt="Tech Stack" className='rounded-full w-10 h-10' key={index}/>
+                              )
+                            })}
+                          </div>
                           <p className='text-center sm:py-3 sm:text-xl'>{api[skillPage]?.desc}</p>
                           <div className='flex w-full justify-center items-center gap-5 mt-5'>
                             <a href={api[skillPage]?.github}><button className='bg-blue-500 hover:bg-blue-700 h-10 w-12 rounded-md sm:w-20'>Github</button></a>
@@ -250,10 +264,17 @@ function Projects() {
                       <div className='flex relative justify-center items-center gap-5 lg:hidden xl:hidden'>
                       <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === 0 ? 'hidden' : `h-12 w-12 cursor-pointer rotate-180 absolute ml-[-120%] `} onClick={() => handlePrevPage()}/>
                       {menu === 'landingpage' && (
-                        <div className='max-w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer sm:h-96 '
+                        <div className='max-w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer sm:h-[450px]'
                         >
                           <h1 className='text-center sm:py-3 sm:text-xl mt-3'>{landingpage[skillPage]?.title}</h1>
                           <img src={landingpage[skillPage]?.img} alt="Photo" />
+                          <div className='flex justify-center items-center gap-5 my-5'>
+                            {landingpage[skillPage].tech?.map((image, index) => {
+                              return (
+                                <img src={image} alt="Tech Stack" className='rounded-full w-10 h-10' key={index}/>
+                              )
+                            })}
+                          </div>
                           <p className='text-center sm:py-3 sm:text-xl'>{landingpage[skillPage]?.desc}</p>
                           <div className='flex w-full justify-center items-center gap-5 mt-5'>
                             <a href={landingpage[skillPage]?.github}><button className='hover:bg-blue-700 bg-blue-500 h-10 w-12 rounded-md sm:w-20'>Github</button></a>
