@@ -21,46 +21,46 @@ function Projects() {
     title: "Alumni Tracking System",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Fats.png?alt=media&token=756ce7b1-2f60-4a3f-95ac-b980e12639c8",
     desc: "OJT Project",
+    accout: "email: test123@gmail.com, password: test123",
     github: "https://github.com/reuvin22/atsfe",
-    live: ""
+    live: "https://atsfe-reuvin22s-projects.vercel.app/"
   },{
     title: "Tourism Management System",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FtourismPic.png?alt=media&token=6bdb93ef-9eab-4862-84b9-6795600beab9",
-    desc: "Freelancing Project",
+    desc: "Freelancing Project (Just Click Login)",
     github: "https://github.com/reuvin22/tourismlaguna",
-    live: ""
+    live: "https://tourismlaguna.vercel.app",
+    message: "Under Revision"
   },{
     title: "Cite",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Fcite3.png?alt=media&token=c4f51f6a-7b38-44dc-8005-69c6b6a1e86e",
     desc: "Freelancing Project",
     github: "",
-    live: ""
+    live: "",
+    message: "Not Available (Under Revision)"
   },
   {
     title: "DOST Attendance Form",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FDOST.png?alt=media&token=16a95feb-a89b-4357-b401-64466d728123",
     desc: "OJT Project",
+    accout: "email: admin123@gmail.com, password: 123123123",
     github: "https://github.com/reuvin22/dostFe",
-    live: ""
+    live: "https://dost-fe-reuvin22s-projects.vercel.app/",
   }]
   const api = [{
     title: "Findspot API",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Ffindspot%20(1)%20(1).png?alt=media&token=ea4d5204-e514-485b-9bf0-d98f6bdfe19d",
-    desc: "test test",
+    desc: "Team Project (Unfinished project)",
     github: "https://github.com/reuvin22/FindSpot",
     live: ""
-  },{
-    title: "Camp Connection API",
-    img: "",
-    desc: "test test"
   }]
 
   const landingpage = [{
     title: "TraPinas",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FladingPage.png?alt=media&token=23b25346-6880-4e2d-a963-1344a99be50e",
-    desc: "test test",
+    desc: "Simple Landing Page (Under Revision)",
     github: "https://github.com/reuvin22/travel",
-    live: ""
+    live: "https://travel-zeta-smoky.vercel.app/"
   }]
 
   const selectedProject = (id) => {
@@ -102,9 +102,10 @@ function Projects() {
                       fullstack.map((proj, index) => (
                         <div className='w-72 h-96 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer sm:hidden md:hidden grid' key={index}
                         onClick={() => selectedProject(index)}>
-                          <h1 className='text-center text-lg font-bold mt-3'>{proj.title}</h1>
+                          <h1 className='text-center text-lg font-bold mt-3'>{proj.title} <br /> {proj.message}</h1>
                           <img src={proj.img} alt="Photo" />
                           <p className='text-center text-lg font-bold'>{proj.desc}</p>
+                          <p className='text-center text-sm font-bold'>{proj.account}</p>
                           <div className='flex w-full justify-center items-center gap-5 mt-5'>
                             <a href={proj.github}><button className='bg-blue-500 hover:bg-blue-700 h-10 w-24 rounded-md py-2 px-5'>Github</button></a>
                             <a href={proj.live}><button className='bg-blue-500 hover:bg-blue-700 h-10 w-24 rounded-md py-2 px-5'>Live</button></a>
