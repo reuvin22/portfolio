@@ -52,7 +52,6 @@ function Projects() {
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Ffindspot%20(1)%20(1).png?alt=media&token=ea4d5204-e514-485b-9bf0-d98f6bdfe19d",
     desc: "Team Project (Unfinished project)",
     github: "https://github.com/reuvin22/FindSpot",
-    live: ""
   }]
 
   const landingpage = [{
@@ -122,7 +121,6 @@ function Projects() {
                           <p className='text-center text-lg font-bold'>{proj.desc}</p>
                           <div className='flex w-full justify-center items-center gap-5 mt-5'>
                             <a href={proj.github}><button className='bg-blue-500 hover:bg-blue-700 h-10 w-24 rounded-md py-2 px-5'>Github</button></a>
-                            <a href={proj.live}><button className='bg-blue-500 h-10 hover:bg-blue-700 w-24 rounded-md py-2 px-5'>Live</button></a>
                           </div>
                         </div>
                       ))
