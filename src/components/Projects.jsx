@@ -21,7 +21,7 @@ function Projects() {
     title: "Alumni Tracking System",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Fats.png?alt=media&token=756ce7b1-2f60-4a3f-95ac-b980e12639c8",
     desc: "OJT Project",
-    account: "email: test123@gmail.com, password: test123",
+    account: "email: test12345@gmail.com, password: test123",
     github: "https://github.com/reuvin22/atsfe",
     live: "https://atsfe-reuvin22s-projects.vercel.app/"
   },{
