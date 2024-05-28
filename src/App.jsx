@@ -26,7 +26,7 @@ function App() {
   }, []);
   return (
     <>
-      <div className='bg-gradient-to-r from-slate-900 to-slate-950 overflow-x-hidden'>
+      <div className='bg-gradient-to-r from-slate-900 to-slate-950 overflow-hidden'>
       <Sidebar />
           <div>
             <span className='font-bold text-gray-800 text-[200px] z-0 absolute left-0 -rotate-12 sm:hidden md:hidden mt-20' id='developer'>DEVELOPER</span>

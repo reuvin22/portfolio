@@ -91,7 +91,7 @@ export default function Skills() {
     }
   return (
     <>
-            <div className='px-24 sm:px-0 bg-gradient-to-r from-slate-900 to-slate-950 h-full w-full'>
+            <div className='px-24 sm:px-0 bg-gradient-to-r from-slate-900 to-slate-950 h-full'>
                 <h1 className='font-bold text-white text-4xl text-center mb-10' id='mySkills'>My Skills</h1>
                 <div className='grid place-items-center gap-y-5' id='skillImg'>
                     <img src={skills[id]?.img} alt="Skill Image" className='max-h-36 sm:max-h-20'/>

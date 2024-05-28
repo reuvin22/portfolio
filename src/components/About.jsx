@@ -43,7 +43,7 @@ function About() {
     setExp(data)
   }
   return (
-    <section id="abouts" className="w-screen">
+    <section id="abouts">
       <div className="mx-10">
         <h1 className="text-header font-bold grid place-items-center py-10">ABOUT</h1>
         <div className="flex gap-20 md:grid md:gap-5 md:place-items-center sm:grid sm:gap-5 sm:place-teims-center">
