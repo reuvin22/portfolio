@@ -21,7 +21,7 @@ function Projects() {
     title: "Alumni Tracking System",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Fats.png?alt=media&token=756ce7b1-2f60-4a3f-95ac-b980e12639c8",
     desc: "OJT Project",
-    account: "email: test12345@gmail.com, password: test123",
+    account: "email: test123@gmail.com, password: test123",
     github: "https://github.com/reuvin22/atsfe",
     live: "https://atsfe-reuvin22s-projects.vercel.app/",
     tech: [
@@ -55,7 +55,7 @@ function Projects() {
     title: "DOST Attendance Form",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FDOST.png?alt=media&token=16a95feb-a89b-4357-b401-64466d728123",
     desc: "OJT Project",
-    account: "email: admin123@gmail.com, password: 123123123",
+    account: "email: test12345@example.com, password: test123456",
     github: "https://github.com/reuvin22/dostFe",
     live: "https://dost-fe-reuvin22s-projects.vercel.app/",
     tech: [
