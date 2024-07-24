@@ -47,7 +47,7 @@ function Projects() {
     title: "Cite",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Fcite3.png?alt=media&token=c4f51f6a-7b38-44dc-8005-69c6b6a1e86e",
     desc: "Freelancing Project",
-    github: "",
+    github: "https://github.com/reuvin22/cite",
     live: "",
     message: "Not Available (Under Revision)"
   },
@@ -88,6 +88,18 @@ function Projects() {
     ]
   }]
 
+  const mobileApp = [{
+    title: "Pawfect Shop",
+    img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FPawfectShop.jpg?alt=media&token=5fd56d5c-401e-4468-af06-f4147cffde71",
+    desc: "Pawfect One stop shop (Not yet done)",
+    github: "https://github.com/reuvin22/pawfect",
+    live: "",
+    tech: [
+      "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FreactN.png?alt=media&token=5f16894a-37a1-4ef1-a45f-0f62601ff2dc",
+      "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Flaravel.png?alt=media&token=08c0b0a3-9302-4b63-b122-f040b84f51e7",
+      "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Fmysql.png?alt=media&token=891162f9-d981-48fc-8779-f2502d97ee3e"
+    ]
+  }]
   const selectedProject = (id) => {
     console.log(id)
   }
@@ -114,6 +126,7 @@ function Projects() {
     return () => aboutTimeline.kill();
   }, []);
 
+  console.log(menu)
   const renderContent = useMemo(() => {
     return (
       <div>
@@ -121,10 +134,40 @@ function Projects() {
                       <span className='text-white cursor-pointer text-xl' onClick={() => handleClick('fullstack')}>Full Stack</span>
                       <span className='text-white cursor-pointer text-xl' onClick={() => handleClick('api')}>API</span>
                       <span className='text-white cursor-pointer text-xl' onClick={() => handleClick('landingpage')}>Landing Page</span>
+                      <span className='text-white cursor-pointer text-xl' onClick={() => handleClick('mobileApp')}>Mobile App</span>
                   </div>
                   <div className='grid place-items-center gap-y-5'>
                     {menu === 'fullstack' && (
                       fullstack.map((proj, index) => (
+                        <div className='w-[70%] h-96 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer sm:hidden md:hidden grid' key={index}
+                        onClick={() => selectedProject(index)}>
+                          <h1 className='text-center text-lg font-bold mt-3'>{proj.title} <br /> {proj.message}</h1>
+                          <div className='flex gap-x-10'>
+                          <img src={proj.img} alt="Photo" className='h-72 w-96 rounded-lg'/>
+                          <div className='w-full grid'>
+                            <div className='grid place-items-center'>
+                              <h1 className='text-center text-white font-bold text-xl'>Tech Stack</h1>
+                              <div className='flex justify-center items-center gap-x-5'>
+                                  {proj.tech?.map((image, index) => {
+                                    return (
+                                      <img src={image} alt="Tech Stack" className='rounded-full w-12 h-12' key={index}/>
+                                    )
+                                  })}
+                              </div>
+                            </div>
+                            <p className='text-center text-lg font-bold'>{proj.desc}</p>
+                            <p className='text-center text-sm font-bold'>{proj.account}</p>
+                              <div className='flex w-full justify-center items-center gap-5 mt-5'>
+                                <a href={proj.github}><button className='bg-blue-500 hover:bg-blue-700 h-10 w-24 rounded-md py-2 px-5'>Github</button></a>
+                                <a href={proj.live}><button className='bg-blue-500 hover:bg-blue-700 h-10 w-24 rounded-md py-2 px-5'>Live</button></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    )}
+                    {menu === 'mobileApp' && (
+                      mobileApp.map((proj, index) => (
                         <div className='w-[70%] h-96 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer sm:hidden md:hidden grid' key={index}
                         onClick={() => selectedProject(index)}>
                           <h1 className='text-center text-lg font-bold mt-3'>{proj.title} <br /> {proj.message}</h1>
@@ -282,7 +325,34 @@ function Projects() {
                           </div>
                         </div>
                       )}
+                      
                       <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === landingpage.length -1 ? 'hidden' : `h-12 w-12 cursor-pointer absolute mr-[-120%]`} onClick={() => handleNextPage()}/>
+                    </div>
+                    )}
+                    {menu === 'mobileApp' && (
+                      <div className='flex relative justify-center items-center gap-5 lg:hidden xl:hidden'>
+                      <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === 0 ? 'hidden' : `h-12 w-12 cursor-pointer rotate-180 absolute ml-[-120%] `} onClick={() => handlePrevPage()}/>
+                      {menu === 'mobileApp' && (
+                        <div className='max-w-72 h-72 border-2 border-white rounded-lg px-10 text-white relative overflow-hidden cursor-pointer sm:h-[450px] grid place-items-center'
+                        >
+                          <h1 className='text-center sm:text-xl'>{mobileApp[skillPage]?.title}</h1>
+                          <img src={mobileApp[skillPage]?.img} alt="Photo" className='h-40 w-60'/>
+                          <div className='flex justify-center items-center gap-5 my-5'>
+                            {mobileApp[skillPage].tech?.map((image, index) => {
+                              return (
+                                <img src={image} alt="Tech Stack" className='rounded-full w-10 h-10' key={index}/>
+                              )
+                            })}
+                          </div>
+                          <p className='text-center sm:text-xl'>{mobileApp[skillPage]?.desc}</p>
+                          <div className='flex w-full justify-center items-center gap-5 '>
+                            <a href={mobileApp[skillPage]?.github}><button className='hover:bg-blue-700 bg-blue-500 h-10 w-12 rounded-md sm:w-20'>Github</button></a>
+                            <a href={mobileApp[skillPage]?.live}><button className='hover:bg-blue-700 bg-blue-500 h-10 w-12 rounded-md sm:w-20'>Live</button></a>
+                          </div>
+                        </div>
+                      )}
+                      
+                      <img src="https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Farrow.png?alt=media&token=e3b654bd-ac5e-4eb8-863f-52a89bda040a" alt="Arrow" className={skillPage === mobileApp.length -1 ? 'hidden' : `h-12 w-12 cursor-pointer absolute mr-[-120%]`} onClick={() => handleNextPage()}/>
                     </div>
                     )}
                   </div>
