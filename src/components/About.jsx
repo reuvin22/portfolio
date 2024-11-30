@@ -14,7 +14,8 @@ function About() {
     "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FScam.png?alt=media&token=18a0d2ac-60cb-4103-86c1-4be503c9df3b",
     "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FGarapal.png?alt=media&token=2843d057-59b3-4e56-9e1c-44d8a8fe2b5c",
     "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Flspu.png?alt=media&token=d8504e7c-6887-4422-8ef7-9edc3739480f",
-    "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FLBIS%20(1).png?alt=media&token=be5deebc-19e4-493c-95cf-fbd2e043ee5a"
+    "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FLBIS%20(1).png?alt=media&token=be5deebc-19e4-493c-95cf-fbd2e043ee5a",
+    "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FMayani.jpg?alt=media&token=ee22b983-f629-4691-81d4-306a1015fe80"
   ]
   const [exp, setExp] = useState('exp');
   useEffect(() => {
@@ -49,8 +50,8 @@ function About() {
         <div className="flex gap-20 md:grid md:gap-5 md:place-items-center sm:grid sm:gap-5 sm:place-teims-center">
           <div className="w-full" id="year">
             <div className="text-center w-full text-header h-full">
-              <h1 className="text-8xl mb-5">1</h1>
-              <h2>Year</h2>
+              <h1 className="text-8xl mb-5">2</h1>
+              <h2>Years</h2>
               <br />
               <h2>Web Development</h2>
               <br />
@@ -90,6 +91,28 @@ function About() {
             <div className='w-full my-10'>
             {exp === 'exp' && (
               <VerticalTimeline>
+                <VerticalTimelineElement
+                contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                className="vertical-timeline-element--work"
+                date="June 2024 - Present"
+                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                icon={<img src={icons[4]} alt='MayaniPH' className='rounded-full'/>}
+              >
+                <h3 className="vertical-timeline-element-title">MAYANI PH</h3>
+                <h4 className="vertical-timeline-element-subtitle">Software Engineer</h4>
+                <h1 className='text-xl mt-3'>
+                  Technologies
+                </h1>
+                <p>
+                  Angular, Node JS, Laravel, Bulma, DynamoDB, PostgreSQL, AWS, Jira, Serverless Framework
+                </p>
+                <h1 className='text-xl mt-3'>
+                  Responsibilities
+                </h1>
+                <p>
+                  Creating UI, Creating Tables in Database, Manages database, Updating ticket in Jira
+                </p>
+              </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}

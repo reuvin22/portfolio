@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Cv from './Hernandez,Reuvin.pdf'; 
+import Cv from './CV.pdf'; 
 import gsap from 'gsap';
 import Sidebar from './Sidebar';
 import { ScrollTrigger } from 'gsap/src/all';
@@ -33,7 +33,7 @@ function Hero() {
               <div className='w-[60%]'>
               <h3 className='text-p text-center' id='intro5'>Passionate web developer dedicated to creating exceptional digital experiences with expertise in front-end and back-end technologies.</h3><br /></div>
               <div className="flex gap-10" id='intro5'>
-                <a href={Cv} download="Hernandez,Reuvin.pdf" target='__blank' rel="noopener noreferrer"><button className='button'>Download CV</button></a><a href="#contacts"><button className='button'>Message Me</button></a>
+                <a href={Cv} download="CV.pdf" target='__blank' rel="noopener noreferrer"><button className='button'>Download CV</button></a><a href="#contacts"><button className='button'>Message Me</button></a>
               </div>
           </div>
         </div>

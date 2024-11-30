@@ -64,7 +64,21 @@ function Projects() {
       "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Fmysql.png?alt=media&token=891162f9-d981-48fc-8779-f2502d97ee3e",
       "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Ftailwind.png?alt=media&token=db1cb375-8728-4a9e-bd39-ace30f3463fe"
     ]
-  }]
+  },
+  {
+    title: "Thrift Shop",
+    img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Fts.png?alt=media&token=f08a8cde-0344-4b51-9bab-436924571440",
+    desc: "Freelancing Project",
+    account: "",
+    github: "https://github.com/reuvin22/thrift_store",
+    live: "",
+    tech: [
+      'https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Fphp.png?alt=media&token=6b432623-07ac-4b09-9b9b-5876aef8368a',
+      "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Fjs.png?alt=media&token=ef21e926-fe20-4f54-ba5b-b366a820986c",
+      "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Fmysql.png?alt=media&token=891162f9-d981-48fc-8779-f2502d97ee3e"
+    ]
+  },
+  ]
   const api = [{
     title: "Findspot API",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Ffindspot%20(1)%20(1).png?alt=media&token=ea4d5204-e514-485b-9bf0-d98f6bdfe19d",
@@ -76,7 +90,19 @@ function Projects() {
     ]
   }]
 
-  const landingpage = [{
+  const landingpage = [
+    {
+      title: "SAGIP",
+      img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FSagip.png?alt=media&token=deb2fe15-c128-4b59-b7fa-3d1a1af177b5",
+      desc: "SAGIP for Pregnancy tips and advice",
+      github: "",
+      live: "https://sagip.info/",
+      tech: [
+        "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Freact.png?alt=media&token=b3fc2469-0fb2-4954-8f5e-2c8099f2b6dc",
+        "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Ftailwind.png?alt=media&token=db1cb375-8728-4a9e-bd39-ace30f3463fe"
+      ]
+    },
+    {
     title: "TraPinas",
     img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FladingPage.png?alt=media&token=23b25346-6880-4e2d-a963-1344a99be50e",
     desc: "Simple Landing Page (Under Revision)",
