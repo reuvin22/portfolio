@@ -95,7 +95,7 @@ function Projects() {
       title: "SAGIP",
       img: "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2FSagip.png?alt=media&token=deb2fe15-c128-4b59-b7fa-3d1a1af177b5",
       desc: "SAGIP for Pregnancy tips and advice",
-      github: "https://github.com/reuvin22/sagip",
+      github: "",
       live: "https://sagip.info/",
       tech: [
         "https://firebasestorage.googleapis.com/v0/b/projectimages-a2f47.appspot.com/o/Portfolio%2Freact.png?alt=media&token=b3fc2469-0fb2-4954-8f5e-2c8099f2b6dc",
