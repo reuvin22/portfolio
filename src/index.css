@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.navLinks {
+    @apply text-white
+    hover:bg-fuchsia-800
+    p-2 rounded-xl
+    px-5
+    transition duration-300
+    hover:shadow-fuchsia-500
+    hover:shadow-3xl
+}
+.text-header {
+    @apply text-4xl
+    text-white
+}
+.text-title {
+    @apply text-5xl
+    text-white
+}
+.text-p {
+    @apply text-xl
+    text-white
+}
+.button {
+    @apply border-fuchsia-900
+    border-2
+    p-5
+    text-white
+    rounded-xl
+    hover:bg-fuchsia-900
+    transition
+    hover:shadow-fuchsia-500
+    duration-300
+    ease-in-out
+    hover:shadow-3xl
+    sm:p-3
+}
+.img {
+    @apply
+    w-16 h-16
+}
+.smImg {
+    @apply
+    h-24 w-32
+}
+.input {
+    @apply
+    h-12 w-80 border-2 border-white bg-slate-900 p-3
+    focus:shadow-fuchsia-900
+    text-white
+    sm:h-9
+}
+.inputArea {
+    @apply
+    h-24 w-80 border-2 border-white bg-slate-900 p-3
+    focus:shadow-fuchsia-950
+    text-white
+}
